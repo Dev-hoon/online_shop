@@ -1,0 +1,37 @@
+.info{
+	position: relative;
+	transform: translate(70%,-70%);
+	display: inline-block;
+	border: 1px solid black;
+	width: 200px;
+	height: 300px;
+	text-align: center;	
+}
+.goods{
+	position: relative;
+	transform: translate(60%,14%);
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+}
+.recently_viewed_goods{
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+.recently_purchased_goods{
+	border: 1px solid black;
+}
+.class_viewed_goods1{
+	border-bottom: 1px solid black;
+}
+.class_purchased_goods1{
+	border-bottom: 1px solid black;
+}
+.goods_img{
+	display: inline-block;
+	margin: 10px;
+	width: 100px;
+}
+.goods_name{
+	display: inline-block;
+}
