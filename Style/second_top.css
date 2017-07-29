@@ -1,3 +1,19 @@
 #second_top{
+	height: 70px;
+
+}
+#menu_button{
+	
+}
+#logo_img{
+	width: 50px;
 	height: 50px;
+	position: absolute;
+	left: 30%;
+}
+#menu_button{
+	float : left;
+	border: 1px solid black;
+	width: 20px;
+	height: 20px;
 }
