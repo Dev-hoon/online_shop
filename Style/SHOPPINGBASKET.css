@@ -1,14 +1,12 @@
-		.container{
+.container{
             display: flex;
             flex-direction: column;
         }
-		header div{
-			float: right;
-			margin-right: 30px;
-		}
-		header h1{
-			text-align: center;
-		}
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+            height: 320px;
+        }
 		 .content{
             display:flex;
         }
