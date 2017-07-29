@@ -1,0 +1,30 @@
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+		header div{
+			float: right;
+			margin-right: 30px;
+		}
+		header h1{
+			text-align: center;
+		}
+		 .content{
+            display:flex;
+        }
+         .content nav{
+            border-right:1px solid gray;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+        	padding: 10px;
+        }
+        table td{
+        	width: 200px;
+        }
