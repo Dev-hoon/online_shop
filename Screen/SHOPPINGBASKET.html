@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SHOPPINGBASKET</title>
+	
+	<!--css를 불러내기 위한 링크 태그 시작-->
+		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+		<link rel="stylesheet" type="text/css" href="‪..\Style\SHOPPINGBASKET.css">
+	<!--css를 불러내기 위한 링크 태그 끝-->
+	<style type="text/css">
+		.container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+            height: 320px;
+        }
+		 .content{
+            display:flex;
+        }
+         .content nav{
+            border-right:1px solid gray;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+        	padding: 10px;
+        }
+		table{
+			display: flex;
+
+		}
+		th{
+			background-color: skyblue;
+		}
+		#total{
+			background-color: skyblue;
+			border-top: 1px solid red;
+			border-bottom: 1px solid red;
+			margin-top: 10px;
+		}
+		#order{
+			float: right;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="common_top">
+				<a href="">회원가입</a>
+				<a href="">로그인</a>
+				<a href="">마이페이지</a>
+			</div>
+			<div id="second_top">
+				<div id="menu_button" style="display: inline-block;">메뉴</div>
+				<div id="logo" style="display: inline-block;"><img src="..\image\logo.png"></div>
+			</div>
+		</header>
+		<section class="content">
+		 	<nav>
+                
+            </nav>
+		 	<main>
+				<div>
+					<h3>장바구니</h3>
+				</div>
+				<div>
+					<table>
+						<tr >
+							<th><input type="checkbox"></th><th>상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th><th>기타</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td><td><input type="submit" name="delete" value="삭제"></td>
+						</tr>
+					</table>
+				</div>
+				<div id="total">배송비: 0원 총금액:36,000원</div>
+				<div id="order">
+					<form action="">
+						<input type="submit" name="order" value="주문하기"> <input type="submit" name="shopping" value="쇼핑하기">
+					</form>
+				</div>
+			</main>
+			<aside>
+                AD
+            </aside>
+		</section>
+	</div>
+</body>
+</html>
