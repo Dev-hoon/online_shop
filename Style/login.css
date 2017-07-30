@@ -12,11 +12,6 @@
 	width: 22em;
 	height: 15em;
 }
-.inline_block
-{
-	display: inline-block;
-	margin: 1em;
-}
 .login_input
 {
 	border:none;
