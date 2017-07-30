@@ -20,3 +20,8 @@
 	position: absolute;
 	left: 40%;
 }
+.inline_block
+{
+	display: inline-block;
+	margin: 1em;
+}
