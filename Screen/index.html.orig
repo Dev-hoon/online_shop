@@ -10,13 +10,10 @@
   		src="http://code.jquery.com/jquery-3.2.1.min.js"
   		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   		crossorigin="anonymous">	
-  	</script>
+  </script>
   	<!--각종 cdn 시작-->
 	<style type="text/css">
-		.swiper-container {
-    		width: 100%;
-    		height: 300px;
-		}      
+		
 	</style>
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
@@ -26,6 +23,7 @@
 	<!--css를 불러내기 위한 링크 태그 끝-->
 </head>
 <body>
+<<<<<<< HEAD
   <div id="common_top" class="basic">
     <div id="menu_button" class="inline_block">메뉴</div>
     <a href=".\join.html">회원가입</a>
@@ -36,6 +34,17 @@
       <div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
     </div>
   <div>
+=======
+<div id="common_top">
+	<div id="menu_button" style="display: inline-block;">메뉴</div>
+	<a href="">회원가입</a>
+	<a href="">로그인</a>
+	<a href="./mypage.html">마이페이지</a>
+</div>
+<div id="second_top" style="display: inline;">
+	<div id="logo"><img id="logo_img" src="..\image\logo.png"></div>
+</div>
+>>>>>>> 91c269c72fe9f5e56c5eed674cf4eae694c6d63a
 <!-- 슬라이드 기능 추가 작업 (마이그레이션 필요: 기능구현만 해놓음.)-->
 	<!-- Slider main container -->
 <div class="swiper-container">
