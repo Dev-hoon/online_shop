@@ -1,0 +1,42 @@
+.basic_setting
+{
+	margin: auto;
+	font-size: 15px;
+	font-family: "맑은고딕";
+	text-align: center;
+}
+.loginbox
+{
+	border:1px solid black;
+	margin: auto;
+	width: 22em;
+	height: 15em;
+}
+.inline_block
+{
+	display: inline-block;
+	margin: 1em;
+}
+.login_input
+{
+	border:none;
+	border-bottom: solid #244169 2px;
+}
+.button
+{
+	border:none;
+	background-color: #244169;
+	color:white;
+	height: 4em;
+	width:4em;
+}
+.button_find
+{
+	border:none;
+	background-color: white;
+	font-weight: bold;
+}
+.blank
+{
+	height: 10em;
+}
