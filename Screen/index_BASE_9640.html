@@ -21,21 +21,18 @@
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
-    <link rel="stylesheet" type="text/css" href="..\Style\company_information.css">
-    <link rel="stylesheet" type="text/css" href="..\Style\index.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
 </head>
 <body>
-  <div id="common_top" class="basic">
-    <div id="menu_button" class="inline_block">메뉴</div>
-    <a href=".\join.html">회원가입</a>
-    <a href=".\login.html">로그인</a>
-    <a href=".\mypage.html">마이페이지</a>
-  </div>
-    <div id="second_top" class="basic">
-      <div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
-    </div>
-  <div>
+<div id="common_top">
+	<div id="menu_button" style="display: inline-block;">메뉴</div>
+	<a href="">회원가입</a>
+	<a href="">로그인</a>
+	<a href="">마이페이지</a>
+</div>
+<div id="second_top" style="display: inline;">
+	<div id="logo"><img id="logo_img" src="..\image\logo.png"></div>
+</div>
 <!-- 슬라이드 기능 추가 작업 (마이그레이션 필요: 기능구현만 해놓음.)-->
 	<!-- Slider main container -->
 <div class="swiper-container">
@@ -45,7 +42,7 @@
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
-        
+        ...
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -77,4 +74,3 @@
   </script>
 </body>
 </html>
-
