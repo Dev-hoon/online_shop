@@ -23,17 +23,29 @@
 		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
     <link rel="stylesheet" type="text/css" href="..\Style\company_information.css">
     <link rel="stylesheet" type="text/css" href="..\Style\index.css">
+        <link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
 </head>
 <body>
   <div id="common_top" class="basic">
-    <div id="menu_button" class="inline_block">메뉴</div>
     <a href=".\join.html">회원가입</a>
     <a href=".\login.html">로그인</a>
     <a href=".\mypage.html">마이페이지</a>
   </div>
     <div id="second_top" class="basic">
-      <div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+        <div id="menu_button" style="display: inline-block;">
+            <div id="menu">menu</div>
+            <ul id="nav">
+                <li><a href="login.html">로그인</li>
+                <li><a href="mypage.html">마이페이지</li>
+                <li><a href="cart.html">장바구니</li>
+                <li><a href="#">공지사항</li>
+                <li><a href="free_board.html">자유게시판</li>
+                <li><a href="#">QnA</li>
+                <li><a href="category.html">상품게시판</li>
+            </ul>
+        </div>
+        <div id="logo" style="display: inline-block;"><img src="..\image\logo.png"></div>
     </div>
   <div>
 <!-- 슬라이드 기능 추가 작업 (마이그레이션 필요: 기능구현만 해놓음.)-->
