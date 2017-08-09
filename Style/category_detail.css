@@ -1,0 +1,72 @@
+		.container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+        }
+        footer{
+            border-top:1px solid gray;
+            padding:20px;
+            text-align: center;
+        }
+        .content{
+            display:flex;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 100px;
+            flex-shrink: 0;
+        }
+        main{
+            padding:10px;
+        }
+        #img_box{
+        	width: 300px;
+        	height: 300px;
+        	border: solid 1px black;
+        	float: left;
+        }
+        .detail{
+        	float: left;
+        	margin-left: 20px;
+        }
+        #amount{
+        	width: 50px;
+        }
+        /* https://nanati.me/html_css_table_design/ 줄노트 디자인*/
+        table.info {
+		    border-collapse: separate;
+		    border-spacing: 1px;
+		    text-align: left;
+		    line-height: 1.5;
+		    border-top: 1px solid #ccc;
+		  margin : 20px 10px;
+		}
+		table.info th {
+		    width: 150px;
+		    padding: 10px;
+		    font-weight: bold;
+		    vertical-align: top;
+		    border-bottom: 1px solid #ccc;
+		}
+		table.info td {
+		    width: 350px;
+		    padding: 10px;
+		    vertical-align: top;
+		    border-bottom: 1px solid #ccc;
+		}
+		/*---------------------------------------------*/
+		.submit_btn{
+			float: right;
+			margin-right: 20px;
+		}
+		.detail_info{
+			clear: both;
+			font-size: 20px;
+			padding-top: 40px;
+			border-bottom: 0.5px solid blue;
+		}
