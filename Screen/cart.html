@@ -103,11 +103,16 @@
 		th{
 			background-color: skyblue;
 		}
+		#amount{
+			width: 40px;
+			text-align: right;
+		}
 		#total{
 			background-color: skyblue;
 			border-top: 1px solid red;
 			border-bottom: 1px solid red;
 			margin-top: 10px;
+			text-align: right;
 		}
 		#order{
 			float: right;
@@ -153,7 +158,7 @@
 							<th><input type="checkbox"></th><th>상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th><th>기타</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td><td><input type="submit" name="delete" value="삭제"></td>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td><td><input type="submit" name="delete" value="삭제"></td>
 						</tr>
 					</table>
 				</div>

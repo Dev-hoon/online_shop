@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>category_detail</title>
+	<!--css를 불러내기 위한 링크 태그 시작-->
+		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+		<link rel="stylesheet" type="text/css" href="‪..\Style\category_detail.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+	<!--css를 불러내기 위한 링크 태그 끝-->
+	<style type="text/css">
+		.container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+        }
+        footer{
+            border-top:1px solid gray;
+            padding:20px;
+            text-align: center;
+        }
+        .content{
+            display:flex;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 100px;
+            flex-shrink: 0;
+        }
+        main{
+            padding:10px;
+        }
+        #img_box{
+        	width: 300px;
+        	height: 300px;
+        	border: solid 1px black;
+        	float: left;
+        }
+        .detail{
+        	float: left;
+        	margin-left: 20px;
+        }
+        #amount{
+        	width: 50px;
+        }
+        /* https://nanati.me/html_css_table_design/ 줄노트 디자인*/
+        table.info {
+		    border-collapse: separate;
+		    border-spacing: 1px;
+		    text-align: left;
+		    line-height: 1.5;
+		    border-top: 1px solid #ccc;
+		  	margin : 20px 10px;
+		}
+		table.info th {
+		    width: 150px;
+		    padding: 10px;
+		    font-weight: bold;
+		    vertical-align: top;
+		    border-bottom: 1px solid #ccc;
+		}
+		table.info td {
+		    width: 350px;
+		    padding: 10px;
+		    vertical-align: top;
+		    border-bottom: 1px solid #ccc;
+		}
+		/*---------------------------------------------*/
+		.submit_btn{
+			float: right;
+			margin-right: 20px;
+		}
+		.detail_info{
+			clear: both;
+			font-size: 20px;
+			padding-top: 40px;
+			border-bottom: 0.5px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="common_top">
+				<a href="">회원가입</a>
+				<a href="">로그인</a>
+				<a href="">마이페이지</a>
+			</div>
+			<div id="second_top">
+				<div id="menu_button" style="display: inline-block;">
+					<div id="menu">menu</div>
+					<ul id="nav">
+						<li><a href="login.html">로그인</a></li>	
+						<li><a href="mypage.html">마이페이지</a></li>
+						<li><a href="cart.html">장바구니<</a>/li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="free_board.html">자유게시판</a></li>
+						<li><a href="#">QnA</a></li>
+						<li><a href="category.html">상품게시판</a></li>
+					</ul>
+				</div>
+				<div id="logo" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></div>
+			</div>
+		</header>
+		<section class="content">
+			<nav>
+                
+            </nav>
+            <main>
+            	<div>
+            		<h2>상품정보</h2>
+            	</div>
+				<div>
+					<div id="img_box"></div>
+					<div class="detail">
+						<form action="">
+							<table class="info">
+								<tr>
+									<th>상품명</th>
+									<td>옷1</td>
+								</tr>
+								<tr>
+									<th>가격</th>
+									<td>10,000원</td>
+								</tr>
+								<tr>
+									<th>색상</th>
+									<td>
+										<select name="color" id="color">
+											<option value="black">블랙</option>
+											<option value="white">화이트</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>사이즈</th>
+									<td>
+										<select name="size" id="size">
+											<option value="90">90</option>
+											<option value="95">95</option>
+											<option value="100">100</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>수량</th>
+									<td>
+										<input id="amount" type="text" value="">
+									</td>
+								</tr>
+								
+							</table>
+							<div class="submit_btn">
+								<input type="submit" value="바로구매">
+								<input type="submit" value="장바구니">
+								<input type="submit" value="쇼핑하기">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div>
+				<div class="detail_info">
+					상세정보
+					<a href="">상품후기</a>
+				</div>
+			</main>
+			<aside>
+                AD
+            </aside>
+		</section>
+	</div>
+</body>
+</html>
