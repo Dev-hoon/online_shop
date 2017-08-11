@@ -1,0 +1,27 @@
+#box
+{
+	display: inline-block;
+	margin: auto;
+	border: 1px solid black;
+	height: 200px;
+	width: 400px;
+}
+.column_name
+{
+	display: inline-block;
+	height: 1em;
+	margin: 0.5em;
+	width: 5em;
+}
+.column_contents
+{
+	display: inline-block;
+	width: 20em;
+	height: 1em;
+	margin: 0.5em;
+}
+.input_box
+{
+	border:none;
+	border-bottom: 1px solid black;
+}
