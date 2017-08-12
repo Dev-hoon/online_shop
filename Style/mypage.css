@@ -1,12 +1,13 @@
 
 .info{
 	position: relative;
-	transform: translate(70%,-70%);
+	transform: translate(70%,-60%);
 	display: inline-block;
 	border: 1px solid black;
 	width: 200px;
 	height: 300px;
 	text-align: center;	
+
 }
 .goods{
 	position: relative;
