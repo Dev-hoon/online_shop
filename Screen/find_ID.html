@@ -7,16 +7,6 @@
 
 	</style>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
-		function choose_email1(classname)
-		{
-			$('.phone_part').hide('phone_part');
-			$('.email_part').show('email_part');
-		}
-		function choose_email2(classname)
-		{
-			$('.email_part').hide('email_part');
-			$('.phone_part').show('phone_part');
-		}
 	</script>
 <!--css를 불러내기 위한 링크 태그 시작-->
 	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
@@ -49,8 +39,8 @@
 	</div><br>
 	<div id="box">
 		<div class="choose_method">
-			<input type="radio" name="check_method" value="email" onclick="choose_email1('email_part')">이메일로 찾기
-			<input type="radio" name="check_method" value="phone" onclick="choose_email2('phone_part')">핸드폰으로 찾기
+			<input type="radio" name="check_method" value="email" onclick="choose_email1('phone_part')">이메일로 찾기
+			<input type="radio" name="check_method" value="phone" onclick="choose_email2('email_part')">핸드폰으로 찾기
 		</div><br>
 		<form action="/action_page.php">
 		<!--항목명과 입력란의 줄을 맞추기 위해 각각 따로 div씌움-->
@@ -80,5 +70,15 @@
 			</div>
 		</form>
 	</div>
-</body>
+	</body>
+	<script type="text/javascript">
+	function choose_email1(classname){
+		$('.phone_part').hide('phone_part');
+		$('.email_part').show('email_part');
+	}
+	function choose_email2(classname){
+		$('.email_part').hide('email_part');
+		$('.phone_part').show('phone_part');
+	}
+	</script>
 </html>
