@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>SHOPPINGBASKET</title>
-	
+	<title>buy</title>
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
-		<link rel="stylesheet" type="text/css" href="‪..\Style\cart.css">
+		<link rel="stylesheet" type="text/css" href="‪..\Style\buy.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
 	<style type="text/css">
@@ -96,11 +95,11 @@
 		  color: #aaa;
 		}
          
-		table{
+		table.buy_info{
 			display: flex;
 
 		}
-		th{
+		table.buy_info th{
 			background-color: skyblue;
 		}
 		#amount{
@@ -114,9 +113,45 @@
 			margin-top: 10px;
 			text-align: right;
 		}
-		#order{
-			float: right;
-			margin-top: 10px;
+		
+		.delivery{
+			margin-top: 100px; 
+		}
+		.delivery_detail{
+			margin-top: 30px;
+		}
+		/* https://nanati.me/html_css_table_design/ 줄노트 디자인*/
+        table.delivery_info {
+		    border-collapse: separate;
+		    border-spacing: 1px;
+		    text-align: left;
+		    line-height: 1.5;
+		    border-top: 1px solid #ccc;
+		  	margin : 20px 10px;
+		}
+		table.delivery_info th {
+		    width: 150px;
+		    padding: 10px;
+		    font-weight: bold;
+		    vertical-align: top;
+		}
+		table.delivery_info td {
+		    width: 350px;
+		    padding: 10px;
+		    vertical-align: top;
+		}
+		/*---------------------------------------------*/
+		.input{
+			width: 80px;
+		}
+		.phone{
+			width: 40px;
+		}
+		.end_btn{
+			padding-left: 50px;
+		}
+		.move_page{
+			margin: 20px;
 		}
 	</style>
 </head>
@@ -150,22 +185,60 @@
             </nav>
 		 	<main>
 				<div>
-					<h3>장바구니</h3>
+					<h3>구매창</h3>
 				</div>
 				<div>
-					<table>
+					<table class="buy_info">
 						<tr >
-							<th><input type="checkbox"></th><th>상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th><th>기타</th>
+							<th><input type="checkbox"></th><th>상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td><td><input type="submit" name="delete" value="삭제"></td>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td>
 						</tr>
 					</table>
 				</div>
 				<div id="total">배송비: 0원 총금액:36,000원</div>
-				<div id="order">
+				<div class="delivery">
+					<div><h4>배송지 정보 입력</h4></div>
 					<form action="">
-						<input type="submit" name="order" value="주문하기"> <input type="submit" name="shopping" value="쇼핑하기">
+						<div>
+							<input type="radio" name="lately">최근배송지
+							<input type="radio" name="new">신규배송지
+						</div>
+						<div class="delivery_detail">
+						 	<form action="">
+								<table class="delivery_info">
+									<tr>
+										<th>받으시는 분</th>
+										<td>
+											<input class="input" type="text" name="reciver">
+										</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>
+											<input class="input" type="text" name="address">	<input type="button" value="우편번호" onclick=""> <br>
+											<input type="text" name="address_detail"> <br>
+											<input type="text" name="address_detail">
+										</td>
+									</tr>
+									<tr>
+										<th>휴대전화</th>
+										<td><input class="phone" type="text">-<input class="phone" type="text">-<input class="phone" type="text"></td>
+									</tr>
+									<tr>
+										<th>배송시 요구사항</th>
+										<td><textarea name="request" id="" cols="30" rows="10"></textarea></td>
+									</tr>
+									<tr>
+										<th></th>
+										<td class="end_btn">
+											<input class="move_page" type="submit" value="결제페이지로 이동" onclick=""><input class="move_page" type="button" value="취소" onclick="">
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>						
 					</form>
 				</div>
 			</main>
