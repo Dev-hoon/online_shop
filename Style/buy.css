@@ -1,11 +1,15 @@
 		.container{
-            display: flex;
+          	display: flex;
             flex-direction: column;
+            background-color: black;
         }
         header{
             border-bottom:1px solid gray;
             padding-left:20px;
             height: 320px;
+        }
+        body{
+        	
         }
 		 .content{
             display:flex;
