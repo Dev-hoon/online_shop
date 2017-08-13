@@ -33,7 +33,7 @@
     <a href=".\mypage.html">마이페이지</a>
   </div>
     <div id="second_top" class="basic">
-        <div id="menu_button" style="display: inline-block;">
+        <div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
             <div id="menu">menu</div>
             <ul id="nav">
                 <li><a href="login.html">로그인</a></li>
@@ -87,6 +87,12 @@
     //scrollbar: '.swiper-scrollbar',
   })        
   </script>
+  
 </body>
+    <script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+    </script>
 </html>
 

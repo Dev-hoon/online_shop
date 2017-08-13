@@ -18,13 +18,8 @@
 		  -webkit-transition: all 0.3s;
 		  color: #222;
 		}
-		#menu_button:hover, #menu_button:focus {
-		  transform: translate3d(130px, 0, 0);
-		  animation-timing-function: 1s ease-in;
-		  height: 100%;
-		}
-		#menu_button #menu {
-		  top: 50%;
+	
+		#menu_button #menu {	
 		  position: absolute;
 		  top: 50%;
 		  -webkit-transform: translateY(-50%);
@@ -38,9 +33,9 @@
 		#menu_button #nav {
 		  position: absolute;
 		  top: 50%;
-		  -webkit-transform: translateY(-50%);
-		  -ms-transform: translateY(-50%);
-		  transform: translateY(-50%);
+		  -webkit-transform: translateY(10%);
+		  -ms-transform: translateY(10%);
+		  transform: translateY(10%);
 		  font-weight: 100;
 		}
 		#menu_button #nav li {
@@ -56,4 +51,15 @@
 		}
 		#menu_button #nav li a:hover {
 		  color: #aaa;
-		}               
+		}    
+		.show_menu{
+			height: 100%;
+			transform: translate3d(130px, 0, 0);
+		 	animation-timing-function: 1s ease-in;	
+		} 
+
+		/*#menu_button:hover, #menu_button:focus {
+		  transform: translate3d(130px, 0, 0);
+		  animation-timing-function: 1s ease-in;
+		  height: 100%;
+		}*/
