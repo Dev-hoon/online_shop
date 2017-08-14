@@ -1,5 +1,12 @@
 .withdraw_info{
 	font-size: 14px;
+	width: 800px;
+	margin: auto;
+	margin-top: 30px;
+}
+.what_was_inconvenient{
+	width: 800px;
+	margin: auto;
 }
 .information_delete{
 	margin: 10px;

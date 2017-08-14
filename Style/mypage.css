@@ -1,4 +1,7 @@
-
+.my_info{
+	width: 600px;
+	margin: auto;
+}
 .info{
 	position: relative;
 	transform: translate(70%,-60%);
@@ -7,7 +10,7 @@
 	width: 200px;
 	height: 300px;
 	text-align: center;	
-
+	
 }
 .goods{
 	position: relative;

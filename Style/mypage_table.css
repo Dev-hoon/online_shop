@@ -1,10 +1,11 @@
 table{
 	position: relative;
-	left: 100px;
 	width: 600px;
 	border: 1px solid black;
 	border-collapse: collapse;
-	text-align:center
+	text-align:center;
+	margin: auto;
+	margin-top: 30px;
 }
 th,td{
 	border: 1px solid black;
