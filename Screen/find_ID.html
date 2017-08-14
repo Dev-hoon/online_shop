@@ -39,7 +39,7 @@
 	</div><br>
 	<div id="box">
 		<div class="choose_method">
-			<input type="radio" name="check_method" id="email" value="email" onclick="selected()">이메일로 찾기
+			<input type="radio" name="check_method" id="email" value="email" checked="checked" onclick="selected()">이메일로 찾기
 			<input type="radio" name="check_method" id="phone" value="phone" onclick="selected()">핸드폰으로 찾기
 		</div><br>
 		<form action="/action_page.php">
@@ -74,12 +74,12 @@
 	<script type="text/javascript">
 	function selected()
 	{
-		if($("#email").prop("checked")==true)
+		if($("#email").prop("checked")=='checked')
 		{
 			$('.phone_part').hide('phone_part');
 			$('.email_part').show('email_part');
 		}
-		if($("#phone").prop("checked")==true)
+		if($("#phone").prop("checked")=='checked')
 		{
 			$('.email_part').hide('email_part');
 			$('.phone_part').show('phone_part');
