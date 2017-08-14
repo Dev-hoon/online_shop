@@ -39,8 +39,8 @@
 	</div><br>
 	<div id="box">
 		<div class="choose_method">
-			<input type="radio" name="check_method" value="email" onclick="choose_email1('phone_part')">이메일로 찾기
-			<input type="radio" name="check_method" value="phone" onclick="choose_email2('email_part')">핸드폰으로 찾기
+			<input type="radio" name="check_method" id="email" value="email" onclick="selected()">이메일로 찾기
+			<input type="radio" name="check_method" id="phone" value="phone" onclick="selected()">핸드폰으로 찾기
 		</div><br>
 		<form action="/action_page.php">
 		<!--항목명과 입력란의 줄을 맞추기 위해 각각 따로 div씌움-->
@@ -72,14 +72,18 @@
 	</div>
 	</body>
 	<script type="text/javascript">
-	function choose_email1(classname){
-		
-		$('.phone_part').hide('phone_part');
-		$('.email_part').show('email_part');
-	}
-	function choose_email2(classname){
-		$('.email_part').hide('email_part');
-		$('.phone_part').show('phone_part');
+	function selected()
+	{
+		if($("#email").prop("checked")==true)
+		{
+			$('.phone_part').hide('phone_part');
+			$('.email_part').show('email_part');
+		}
+		if($("#phone").prop("checked")==true)
+		{
+			$('.email_part').hide('email_part');
+			$('.phone_part').show('phone_part');
+		}
 	}
 	</script>
 </html>
