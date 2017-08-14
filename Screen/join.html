@@ -39,12 +39,12 @@
 
 				<div class="column_name">PW확인</div>
 				<div class="column_contents">
-					<input type="password" name="pw_check" id="pw_check">
+					<input type="password" name="pw_check" id="pw_check" onblur="compare_PW_check()">
 				</div><br>
 
 				<div class="column_name">이름</div>
 				<div class="column_contents">
-					<input type="text" name="name" onclick="compare_PW_check()">
+					<input type="text" name="name">
 				</div><br>
 				<div class="column_name">주소</div>
 				<div class="column_contents">
@@ -88,14 +88,6 @@
 	</div>
 </body>
 <script type="text/javascript">
-			function compare_pw_check(input_pw, input_pw_check){
-			if(input_pw != input_pw_check)
-				alert("비밀번호를 다시 확인해주십시오.");
-			}
-	
-		var input_pw = $('#pw').val();
-		var input_pw_check = $('#pw_check').val();
-
 	function compare_PW_check()
 	{
 		if($("#pw").val() != $("#pw_check").val())
