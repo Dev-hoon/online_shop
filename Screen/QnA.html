@@ -3,6 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>QnA</title>
+
+	<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">	
+  	</script>
+
 	<style type="text/css">
 		
 	</style>
@@ -20,7 +27,7 @@
 		<a href=".\mypage.html">마이페이지</a>
 	</div>
 		<div id="second_top" class="basic">
-			<div id="menu_button" style="display: inline-block;">
+			<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
 
 				<div id="menu">menu</div>
 				<ul id="nav">
@@ -33,7 +40,7 @@
 					<li><a href="category.html">상품게시판</a></li>
 				</ul>
 			</div>
-		<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+		<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
 		<div id="page_title" class="inline_block">문의게시판</div>
 		</div>
 	<div>
@@ -132,4 +139,9 @@
 		>>
 	</div>
 </body>
+<script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+</script>
 </html>
