@@ -1,0 +1,110 @@
+.main{
+	width: 700px;
+	margin: 20px auto;
+	border: 1px solid #d3e8ef;
+	padding: 20px;
+}
+.name{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.member_name{
+	display: inline-block;
+}
+.id{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.member_id{
+	display: inline-block;
+}
+.pw{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.input_pw{
+	
+}
+.change_pw_info{
+	display: inline-block;
+	font-size: 10px;
+}
+.new_pw{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.input_new_pw{
+	
+}
+.check_new_pw{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.input_check_new_pw{
+	
+}
+.birth_date{
+ 	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.check_gender{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.address{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.input_address{
+	margin-left: 175px;
+	width: 200px;
+}
+.phone{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.input_phone1{
+	width: 50px;
+	text-align: center;
+}
+.input_phone2{
+	width: 50px;
+	text-align: center;
+}
+.input_phone3{
+	width: 50px;
+	text-align: center;
+}
+.email{
+	display: inline-block;
+	width: 150px;
+	margin: 10px;
+}
+.input_email{
+	width: 100px;
+}
+.ok_button{
+	position: absolute;
+	left: 35%;
+	background: #244169;
+	color: white;
+	border: 1px solid black;
+	margin: 20px;
+}
+.cancle_button{
+	position: absolute;
+	left: 42%;
+	background: #244169;
+	color: white;
+	border: 1px solid black;
+	margin: 20px auto;
+}

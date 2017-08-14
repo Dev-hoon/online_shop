@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>find_ID</title>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+	</script>
+<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\find_ID.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+<!--css를 불러내기 위한 링크 태그 끝-->
+</head>
+<body>
+	<div id="common_top" class="basic">
+		<a href=".\join.html">회원가입</a>
+		<a href=".\login.html">로그인</a>
+		<a href=".\mypage.html">마이페이지</a>
+	</div>
+	<div id="second_top" class="basic">
+		<div id="menu_button" style="display: inline-block;">
+			<div id="menu">menu</div>
+			<ul id="nav">
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="mypage.html">마이페이지</a></li>
+				<li><a href="cart.html">장바구니</a></li>
+				<li><a href="notice.html">공지사항</a></li>
+				<li><a href="review.html">후기게시판</a></li>
+				<li><a href="QnA.html">QnA</a></li>
+				<li><a href="category.html">상품게시판</a></li>
+			</ul>
+		</div>
+		<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+		<div id="page_title" style="display: inline-block;">Online-Shop</div>
+	</div><br>
+	<div id="box">
+		<div class="choose_method">
+			<input type="radio" name="check_method" value="email" onclick="choose_email1('phone_part')">이메일로 찾기
+			<input type="radio" name="check_method" value="phone" onclick="choose_email2('email_part')">핸드폰으로 찾기
+		</div><br>
+		<form action="/action_page.php">
+		<!--항목명과 입력란의 줄을 맞추기 위해 각각 따로 div씌움-->
+			<div class="column_name">이름</div>
+			<div class="column_contents">
+				<input type="text" name="user_name" class="input_box">
+			</div><br>
+			<div class="email_part">
+				<div class="column_name">이메일</div>
+				<div class="column_contents">
+					<input type="text" name="user_email" class="input_box">@
+					<select>
+						<option>naver.com</option>
+						<option>gmail.com</option>
+						<option>hanmail.net</option>
+					</select>
+				</div><br>
+			</div>
+			<div class="phone_part">
+				<div class="column_name">핸드폰</div>
+				<div class="column_contents">
+					<input type="tel" name="user_phone" class="input_box">
+				</div>
+			</div><br>
+			<div>
+				<input type="submit" value="조회">
+			</div>
+		</form>
+	</div>
+	</body>
+	<script type="text/javascript">
+	function choose_email1(classname){
+		
+		$('.phone_part').hide('phone_part');
+		$('.email_part').show('email_part');
+	}
+	function choose_email2(classname){
+		$('.email_part').hide('email_part');
+		$('.phone_part').show('phone_part');
+	}
+	</script>
+</html>

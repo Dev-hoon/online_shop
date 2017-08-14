@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>SHOPPINGBASKET</title>
+	
+	<!--css를 불러내기 위한 링크 태그 시작-->
+		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+		<link rel="stylesheet" type="text/css" href="‪..\Style\cart.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+	<!--css를 불러내기 위한 링크 태그 끝-->
+	<style type="text/css">
+		.container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+            height: 200px;
+        }
+		 .content{
+            display:flex;
+        }
+         .content nav{
+            
+        }
+        .content aside{
+           
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+        	padding: 10px;
+        	width: 90%;
+        }
+         body {
+		  margin: 0;
+		  font-family: 'Muli', sans-serif;
+		}
+
+		#menu_button {
+		  font-weight: 100;
+		  background: #efefef;
+		  width: 170px;
+		  height: 10%;
+		  padding-right: : 50px;
+		  position: fixed;
+		  z-index: 100;
+		  -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+		  box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+		  left: -130px;
+		  transition: all 0.3s;
+		  -webkit-transition: all 0.3s;
+		  color: #222;
+		}
+		#menu_button:hover, #menu_button:focus {
+		  transform: translate3d(130px, 0, 0);
+		  animation-timing-function: 1s ease-in;
+		  height: 100%;
+		}
+		#menu_button #menu {
+		  top: 50%;
+		  position: absolute;
+		  top: 50%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  transform: rotate(270deg);
+		  right: 10px;
+		  font-weight: 800;
+		  font-size: 15px;
+		}
+		#menu_button #nav {
+		  position: absolute;
+		  top: 50%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  font-weight: 100;
+		}
+		#menu_button #nav li {
+		  padding-bottom: 30px;
+		  list-style-type: none;
+		}
+		#menu_button #nav li a {
+		  display: block;
+		  text-decoration: none;
+		  color: inherit;
+		  transition: all 0.3s;
+		  -webkit-transition: all 0.3s;
+		}
+		#menu_button #nav li a:hover {
+		  color: #aaa;
+		}
+         
+		table{
+			display: flex;
+
+		}
+		th{
+			background-color: #d6e8e5;
+		}
+		.goods_name{
+			width: 62%;
+		}
+		#amount{
+			width: 40px;
+			text-align: right;
+		}
+		#total{
+			background-color: #d6e8e5;
+			height: 30px;
+			font-size: 20px;
+			margin-top: 10px;
+			text-align: right;
+		}
+		#order{
+			float: right;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="common_top">
+				<a href="./join.html">회원가입</a>
+				<a href="./login.html">로그인</a>
+				<a href="./mypage.html">마이페이지</a>
+			</div>
+			<div id="second_top">
+				<div id="menu_button" style="display: inline-block;">
+					<div id="menu">menu</div>
+					<ul id="nav">
+						<li><a href="login.html">로그인</a></li>
+						<li><a href="mypage.html">마이페이지</a></li>
+						<li><a href="cart.html">장바구니</a></li>
+						<li><a href="notice.html">공지사항</a></li>
+						<li><a href="review.html">후기게시판</a></li>
+						<li><a href="QnA.html">QnA</a></li>
+						<li><a href="category.html">상품게시판</a></li>
+					</ul>
+				</div>
+				<a href="./index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
+				<div id="page_title" class="inline_block">장바구니</div>
+			</div>
+		</header>
+		<section class="content">
+		 	<nav>
+                
+            </nav>
+		 	<main>
+				<div>
+					<h3>장바구니</h3>
+				</div>
+				<div>
+					<table>
+						<tr >
+							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th><th>기타</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td><td><input type="submit" name="delete" value="삭제"></td>
+						</tr>
+					</table>
+				</div>
+				<div id="total">배송비: 0원 총금액:36,000원</div>
+				<div id="order">
+					<form action="">
+						<input type="submit" name="order" value="주문하기" onclick="location.href = 'buy.html'"> <input type="submit" name="shopping" value="쇼핑하기">
+					</form>
+				</div>
+			</main>
+			<aside>
+                AD
+            </aside>
+		</section>
+	</div>
+</body>
+</html>

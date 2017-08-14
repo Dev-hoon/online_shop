@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>join</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous">
+		function compare_pw_check(input_pw, input_pw_check){
+			if(input_pw != input_pw_check)
+				alert("비밀번호를 다시 확인해주십시오.");
+			}
+	
+		var input_pw = $('.write_PW').val();
+		var input_pw_check = $('.write_PW_check').val();
+	</script>
+<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\join.css">
+<!--css를 불러내기 위한 링크 태그 끝-->
+</head>
+<body>
+	<div id="common_top" class="basic">
+		<a href=".\join.html">회원가입</a>
+		<a href=".\login.html">로그인</a>
+		<a href=".\mypage.html">마이페이지</a>
+	</div>
+		<div id="second_top" class="basic">
+			<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+			<div id="page_title" style="display: inline-block;">Online-Shop</div>
+		</div>
+	<div>
+		<form action="/action_page.php" id="join_box">
+			<div class="basic" >
+				<div class="column_name">ID</div>
+				<div class="column_contents">
+					<input type="text" name="id">
+				</div><br>
+
+				<div class="column_name">PW</div>
+				<div class="column_contents">
+					<input type="password" name="pw">
+				</div><br>
+
+				<div class="column_name">PW확인</div>
+				<div class="column_contents">
+					<input type="password" name="pw_check">
+				</div><br>
+
+				<div class="column_name">이름</div>
+				<div class="column_contents">
+					<input type="text" name="name">
+				</div><br>
+				<div class="column_name">주소</div>
+				<div class="column_contents">
+					<input type="text" name="zipcode">&nbsp
+					<button type="button" formtarget="_blank" onclick="window.open('./post.html')">
+						우편번호 찾기
+					</button>
+				</div><br>
+				<div class="column_name"> &nbsp</div>
+				<div class="column_contents">
+					<input type="text" name="address">
+				</div><br>
+				<div class="column_name">휴대전화</div>
+				<div class="column_contents">
+					<input type="tel" name="phone">
+				</div><br>
+			</div>
+
+			<div class="basic">
+				이용약관 동의
+				<div class="terms_box">
+					약관 내용
+				</div>
+				<div>
+					<input type="checkbox" name="terms_ok">동의함
+				</div>
+			</div>
+
+			<div class="basic">
+				개인정보 수집 및 이용 동의
+				<div class="terms_box">
+					약관 내용
+				</div>
+				<div>
+					<input type="checkbox" name="privacy_ok">동의함
+				</div>
+			</div>
+			<input type="submit" name="submit" value="완료" class="button basic_blue">
+			<input type="reset" name="reset" value="취소" class="button">	
+		</form>
+	</div>
+
+</body>
+</html>

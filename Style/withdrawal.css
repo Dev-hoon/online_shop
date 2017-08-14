@@ -1,0 +1,35 @@
+.withdraw_info{
+	font-size: 14px;
+	width: 800px;
+	margin: auto;
+	margin-top: 30px;
+}
+.what_was_inconvenient{
+	width: 800px;
+	margin: auto;
+}
+.information_delete{
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+.information_keep{
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+.choose_reason{
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+	font-size: 12px;
+}
+.withdrawal_button{
+	position: absolute;
+	left: 45%;
+	border: black;
+	background-color: #244169;
+	color: white;
+	height: 30px;
+	width: 70px;
+}

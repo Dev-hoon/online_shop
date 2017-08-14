@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>change membership information</title>
+
+	<style type="text/css">
+
+
+	</style>
+	<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\change_membership.css">
+	
+	<!--css를 불러내기 위한 링크 태그 끝-->
+
+</head>
+<body>
+	<div id="common_top">
+		<a href="./join.html">회원가입</a>
+		<a href="./login.html">로그인</a>
+		<a href="./mypage.html">마이페이지</a>
+	</div>
+	<div id="second_top">
+		<div id="menu_button" style="display: inline-block;">
+			<div id="menu">menu</div>
+			<ul id="nav">
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="mypage.html">마이페이지</a></li>
+				<li><a href="cart.html">장바구니</a></li>
+				<li><a href="notice.html">공지사항</a></li>
+				<li><a href="review.html">후기게시판</a></li>
+				<li><a href="QnA.html">QnA</a></li>
+				<li><a href="category.html">상품게시판</a></li>
+			</ul>
+		</div>
+		<div id="page_title" style="display: inline-block;">Online-Shop</div>
+		<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+	</div>
+	<br>
+	<div class="main">
+		<h3>회원정보수정</h3>
+		<div>
+			<div class="name">이름</div>
+			<div class="member_name">전혜인</div>
+		</div>
+		<div>
+			<div class="id">아이디</div>
+			<div class="member_id">id1234</div>
+		</div>
+		<div>
+			<div class="pw">현재 비밀번호</div>
+			<input type="password" class="input_pw">
+			<div class="change_pw_info">* 기존 비밀번호를 변경하실 경우 입력해주세요.</div>
+		</div>
+		<div>
+			<div class="new_pw">새 비밀번호</div>
+			<input type="password" class="input_new_pw">
+		</div>
+		<div>
+			<div class="check_new_pw">새 비밀번호 확인</div>
+			<input type="password" class="input_check_new_pw">
+		</div>
+		<div>
+			<div class="birth_date">생년월일</div>
+			<input type="number" max="2017" min="1930" class="birth_year">년
+			<input type="number" max="12" min="01" class="birth_month">월
+			<input type="number" max="31" min="01" class="birth_year">일
+			<input type="radio" name="calender" value="양력" class="solar" checked>양력
+			<input type="radio" name="calender" value="음력" class="lunar">음력
+		</div>
+		<div>
+			<div class="check_gender">성별 선택</div>
+			<input type="radio" name="gender">남자
+			<input type="radio" name="gender">여자
+		</div>
+		<div>
+			<div class="address">주소</div>
+			<input type="text" name="find_postcode">
+			<a href="https://www.epeople.go.kr/jsp/common/co/CoZipcode2.jsp?frm=null&basezip=null&adr1=null&adr2=null&scode=null&jgubun=null&gubun=new"><input type="button" value="우편번호 찾기>" name="find_postcode"></a> <!--도로명주소 찾는 페이지 링크-->
+			<br>
+			<input type="text" class="input_address">
+		</div>
+		<div>
+			<div class="phone">휴대전화</div>
+			<input type="tel" class="input_phone1" maxlength="3">-
+			<input type="tel" class="input_phone2" maxlength="4">-
+			<input type="tel" class="input_phone3" maxlength="4">
+		</div>
+		<div>
+			<div class="email">이메일</div>
+			<input type="email" class="input_email">@
+			<select>
+				<option>naver.com</option>
+				<option>gmail.com</option>
+				<option>hanmail.net</option>
+				<option>hotmail.com</option>
+				<option>yahoo.co.kr</option>
+			</select>
+		</div>
+		<div>
+			<input type="submit" class="ok_button" value="수정">
+			<input type="button" class="cancle_button" value="취소">
+		</div>	
+	</div>
+
+
+	</body>
+</html>

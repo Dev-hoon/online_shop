@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>buy</title>
+	
+	<style type="text/css">
+		.container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+            height: 320px;
+        }
+		 .content{
+            display:flex;
+        }
+         .content nav{
+            border-right:1px solid gray;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+        	padding: 10px;
+        }
+         body {
+		  margin: 0;
+		  font-family: 'Muli', sans-serif;
+		}
+
+		#menu_button {
+		  font-weight: 100;
+		  background: #efefef;
+		  width: 170px;
+		  height: 10%;
+		  padding-right: : 50px;
+		  position: fixed;
+		  z-index: 100;
+		  -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+		  box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+		  left: -130px;
+		  transition: all 0.3s;
+		  -webkit-transition: all 0.3s;
+		  color: #222;
+		}
+		#menu_button:hover, #menu_button:focus {
+		  transform: translate3d(130px, 0, 0);
+		  animation-timing-function: 1s ease-in;
+		  height: 100%;
+		}
+		#menu_button #menu {
+		  top: 50%;
+		  position: absolute;
+		  top: 50%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  transform: rotate(270deg);
+		  right: 10px;
+		  font-weight: 800;
+		  font-size: 15px;
+		}
+		#menu_button #nav {
+		  position: absolute;
+		  top: 50%;
+		  -webkit-transform: translateY(-50%);
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  font-weight: 100;
+		}
+		#menu_button #nav li {
+		  padding-bottom: 30px;
+		  list-style-type: none;
+		}
+		#menu_button #nav li a {
+		  display: block;
+		  text-decoration: none;
+		  color: inherit;
+		  transition: all 0.3s;
+		  -webkit-transition: all 0.3s;
+		}
+		#menu_button #nav li a:hover {
+		  color: #aaa;
+		}
+         
+		table.buy_info{
+			display: flex;
+
+		}
+		table.buy_info th{
+			background-color: skyblue;
+		}
+		#amount{
+			width: 40px;
+			text-align: right;
+		}
+		#total{
+			background-color: skyblue;
+			border-top: 1px solid red;
+			border-bottom: 1px solid red;
+			margin-top: 10px;
+			text-align: right;
+		}
+		
+		.delivery{
+			margin-top: 100px; 
+		}
+		.delivery_detail{
+			margin-top: 30px;
+		}
+		/* https://nanati.me/html_css_table_design/ 줄노트 디자인*/
+        table.delivery_info {
+		    border-collapse: separate;
+		    border-spacing: 1px;
+		    text-align: left;
+		    line-height: 1.5;
+		    border-top: 1px solid #ccc;
+		  	margin : 20px 10px;
+		}
+		table.delivery_info th {
+		    width: 150px;
+		    padding: 10px;
+		    font-weight: bold;
+		    vertical-align: top;
+		}
+		table.delivery_info td {
+		    width: 350px;
+		    padding: 10px;
+		    vertical-align: top;
+		}
+		/*---------------------------------------------*/
+		.input{
+			width: 80px;
+		}
+		.phone{
+			width: 40px;
+		}
+		.end_btn{
+			padding-left: 50px;
+		}
+		.move_page{
+			margin: 20px;
+		}
+	</style>
+
+	<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="‪..\Style\buy.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+
+	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+	<!--css를 불러내기 위한 링크 태그 끝-->
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="common_top">
+				<a href="./join.html">회원가입</a>
+				<a href="./login.html">로그인</a>
+				<a href="./mypage.html">마이페이지</a>
+			</div>
+			<div id="second_top">
+				<div id="menu_button" style="display: inline-block;">
+					<div id="menu">menu</div>
+					<ul id="nav">
+						<li><a href="login.html">로그인</a></li>
+						<li><a href="mypage.html">마이페이지</a></li>
+						<li><a href="cart.html">장바구니</a></li>
+						<li><a href="notice.html">공지사항</a></li>
+						<li><a href="review.html">후기게시판</a></li>
+						<li><a href="QnA.html">QnA</a></li>
+						<li><a href="category.html">상품게시판</a></li>
+					</ul>
+				</div>
+<<<<<<< HEAD
+				<div id="logo" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></div>
+				<div id="page_title" style="display: inline-block;">Online-Shop</div>
+=======
+				<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+				<div id="page_title" class="inline_block">구매</div>
+>>>>>>> 502f5adb0f4ebec4e3b74613b79beb2d41adc825
+			</div>
+		</header>
+		<section class="content">
+		 	<nav>
+                
+            </nav>
+		 	<main>
+				<div>
+					<h3>구매창</h3>
+				</div>
+				<div>
+					<table class="buy_info">
+						<tr >
+							<th><input type="checkbox"></th><th>상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td>
+						</tr>
+					</table>
+				</div>
+				<div id="total">배송비: 0원 총금액:36,000원</div>
+				<div class="delivery">
+					<div><h4>배송지 정보 입력</h4></div>
+					<form action="">
+						<div>
+							<input type="radio" name="lately">최근배송지
+							<input type="radio" name="new">신규배송지
+						</div>
+						<div class="delivery_detail">
+						 	<form action="">
+								<table class="delivery_info">
+									<tr>
+										<th>받으시는 분</th>
+										<td>
+											<input class="input" type="text" name="reciver">
+										</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>
+											<input class="input" type="text" name="address">	<input type="button" value="우편번호" onclick=""> <br>
+											<input type="text" name="address_detail"> <br>
+											<input type="text" name="address_detail">
+										</td>
+									</tr>
+									<tr>
+										<th>휴대전화</th>
+										<td><input class="phone" type="text">-<input class="phone" type="text">-<input class="phone" type="text"></td>
+									</tr>
+									<tr>
+										<th>배송시 요구사항</th>
+										<td><textarea name="request" id="" cols="30" rows="10"></textarea></td>
+									</tr>
+									<tr>
+										<th></th>
+										<td class="end_btn">
+											<input class="move_page" type="submit" value="결제페이지로 이동" onclick=""><input class="move_page" type="button" value="취소" onclick="">
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>						
+					</form>
+				</div>
+			</main>
+			<aside>
+                AD
+            </aside>
+		</section>
+	</div>
+</body>
+</html>

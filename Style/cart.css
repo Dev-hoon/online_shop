@@ -1,0 +1,48 @@
+		.container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+            height: 320px;
+        }
+		 .content{
+            display:flex;
+        }
+         .content nav{
+            border-right:1px solid gray;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+        	padding: 10px;
+        }
+       
+		table{
+			display: flex;
+
+		}
+		th{
+			background-color: skyblue;
+		}
+        #amount{
+            width: 40px;
+            text-align: right;
+        }
+		#total{
+			background-color: skyblue;
+			border-top: 1px solid red;
+			border-bottom: 1px solid red;
+			margin-top: 10px;
+            text-align: right;
+		}
+		#order{
+			float: right;
+			margin-top: 10px;
+		}

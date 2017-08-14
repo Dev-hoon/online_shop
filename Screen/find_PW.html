@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>find_PW</title>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+		
+	</script>
+<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\find_PW.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+<!--css를 불러내기 위한 링크 태그 끝-->
+</head>
+<body>
+	<div id="common_top" class="basic">
+		<a href=".\join.html">회원가입</a>
+		<a href=".\login.html">로그인</a>
+		<a href=".\mypage.html">마이페이지</a>
+	</div>
+	<div id="second_top" class="basic">
+		<div id="menu_button" style="display: inline-block;">
+			<div id="menu">menu</div>
+			<ul id="nav">
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="mypage.html">마이페이지</a></li>
+				<li><a href="cart.html">장바구니</a></li>
+				<li><a href="notice.html">공지사항</a></li>
+				<li><a href="review.html">후기게시판</a></li>
+				<li><a href="QnA.html">QnA</a></li>
+				<li><a href="category.html">상품게시판</a></li>
+			</ul>
+		</div>
+		<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+		<div id="page_title" style="display: inline-block;">Online-Shop</div>
+	</div><br>
+	<div id="box">
+		<form action="/action_page.php">
+		<!--항목명과 입력란의 줄을 맞추기 위해 각각 따로 div씌움-->
+			<div class="column_name">아이디</div>
+			<div class="column_contents">
+				<input type="text" name="id" class="input_box">
+			</div><br>
+			<div class="column_name">이름</div>
+			<div class="column_contents">
+				<input type="text" name="name" class="input_box">
+			</div><br>
+			<div class="column_name">핸드폰</div>
+			<div class="column_contents">
+				<input type="text" name="phone" class="input_box">
+			</div><br>
+			<div>
+				<input type="submit" value="조회">
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

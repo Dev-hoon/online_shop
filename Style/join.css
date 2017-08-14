@@ -1,0 +1,55 @@
+body{
+	background-color: #f9f9f7;
+}
+.basic
+{
+	font-family: "맑은고딕";
+	font-size: 15;
+	margin:auto;
+}
+#join_box{
+	border: 1px solid #d6e8e5;
+	width: 60%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 20px;
+
+}
+.terms_box
+{
+	border: 1px solid black;
+	height: 200px;
+	width: 400px;
+	margin: 0.5em;
+}
+.column_name
+{
+	display: inline-block;
+	width: 5em;
+	height: 1em;
+	margin:0.5em;
+}
+.column_contents
+{
+	display: inline-block;
+	width: 20em;
+	height: 1em;
+	margin: 0.5em;
+}
+.basic_blue
+{
+	background-color: #244169;
+	color: white;
+}
+.button
+{
+	text-align: center;
+	border:solid black 1px;
+	transition-property: background-color, color;
+}
+.button:hover
+{
+	transition-property: background-color, color;
+	background-color: lightgrey;
+	color:black;
+}

@@ -1,3 +1,29 @@
+@font-face{
+	font-family: 'Royalacid_o';
+	src: url('Royalacid_o.ttf');
+}
 #second_top{
-	height: 50px;
+	height: 100px;
+	background: #e9eaff;
+
+}
+#logo_img{
+	width: 100px;
+	height: auto;
+	position: absolute;
+	left: 35%;
+}
+#page_title
+{
+	font-size: 45px;
+	position: absolute;
+	left: 45%;
+	top: 10%;
+	text-align: center;
+	font-family: 'Royalacid_o' !important;
+}
+.inline_block
+{
+	display: inline-block;
+	margin: 1em;
 }
