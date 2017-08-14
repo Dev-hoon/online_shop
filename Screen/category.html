@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>GOODS</title>
+	<title>category</title>
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
@@ -17,25 +17,21 @@
 		header{
             border-bottom:1px solid gray;
             padding-left:20px;
-            height: 320px;
+            height: 200px;
         }
       
         
 		 .content{
             display:flex;
         }
-         .content nav{
-            border-right:1px solid gray;
-        }
-        .content aside{
-            border-left:1px solid gray;    
-        }
+        
         nav, aside{
             flex-basis: 150px;
             flex-shrink: 0;
         }
         main{
         	padding: 10px;
+        	width: 100%;
         }
         table td{
         	width: 200px;
@@ -49,7 +45,7 @@
 			height:16px;
 			color:black;
 			font-family:arial;
-			font-size:12px;
+			font-size:15px;
 			padding:0 10px 0 10px;
 			text-decoration:none;
 		}
@@ -57,12 +53,13 @@
 		#goods_menu a:hover {
 			color:#D4F4FA;
 			border-bottom:3px solid #FAED7D;
+			background-color: #41423a;
 		}
 
 		#goods_menu ul ul {
 			display:none;
 			position:absolute;
-			background-color:#5c5c5c;
+			background-color:#defff7;
 		}
 
 		#goods_menu ul li:hover ul {
@@ -79,9 +76,9 @@
 	<div class="container">
 		<header>
 			<div id="common_top">
-				<a href="">회원가입</a>
-				<a href="">로그인</a>
-				<a href="">마이페이지</a>
+				<a href="./join.hmtl">회원가입</a>
+				<a href="./login.html">로그인</a>
+				<a href="./mypage.html">마이페이지</a>
 			</div>
 			<div id="second_top">
 				<div id="menu_button" style="display: inline-block;">
@@ -90,14 +87,14 @@
 						<li><a href="login.html">로그인</a></li>
 						<li><a href="mypage.html">마이페이지</a></li>
 						<li><a href="cart.html">장바구니</a></li>
-						<li><a href="#">공지사항</a></li>
-						<li><a href="free_board.html">자유게시판</a></li>
-						<li><a href="#">QnA</a></li>
+						<li><a href="notice.html">공지사항</a></li>
+						<li><a href="review.html">후기게시판</a></li>
+						<li><a href="QnA.html">QnA</a></li>
 						<li><a href="category.html">상품게시판</a></li>
 					</ul>
 				</div>
-				<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
-				<div id="page_title" class="inline_block">카테고리</div>
+				<div id="logo" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></div>
+				<div id="page_title" style="display: inline-block;">Online-Shop</div>
 			</div>
 		</header>
 		<section class="content">
