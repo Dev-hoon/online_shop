@@ -223,8 +223,8 @@
 					<div><h4>배송지 정보 입력</h4></div>
 					<form action="">
 						<div>
-							<input type="radio" name="lately">최근배송지
-							<input type="radio" name="new">신규배송지
+							<input type="radio" name="shipping" checked="checked">최근배송지
+							<input type="radio" name="shipping">신규배송지
 						</div>
 						<div class="delivery_detail">
 						 	<form action="">
@@ -254,7 +254,7 @@
 									<tr>
 										<th></th>
 										<td class="end_btn">
-											<input class="move_page" type="submit" value="결제페이지로 이동" onclick=""><input class="move_page" type="button" value="취소" onclick="">
+											<input class="move_page" type="button" value="결제페이지로 이동" onclick="location.href='./payment.html'"><input class="move_page" type="button" value="취소" onclick="location.href='history.back()'">
 										</td>
 									</tr>
 								</table>
