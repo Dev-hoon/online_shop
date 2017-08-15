@@ -3,6 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>change membership information</title>
+	<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">	
+  	</script>
 
 	<style type="text/css">
 
@@ -24,7 +29,9 @@
 		<a href="./mypage.html">마이페이지</a>
 	</div>
 	<div id="second_top">
-		<div id="menu_button" style="display: inline-block;">
+		
+		<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
+
 			<div id="menu">menu</div>
 			<ul id="nav">
 				<li><a href="login.html">로그인</a></li>
@@ -37,7 +44,7 @@
 			</ul>
 		</div>
 		<div id="page_title" style="display: inline-block;">Online-Shop</div>
-		<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+		<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
 	</div>
 	<br>
 	<div class="main">
@@ -105,7 +112,11 @@
 			<input type="button" class="cancle_button" value="취소">
 		</div>	
 	</div>
-
-
 	</body>
+	<script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+</script>
+
 </html>
