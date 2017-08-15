@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="582f1ca1-7952-454b-8089-6b89e67bfd01" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/online_shop.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Screen/QnA.html" afterPath="$PROJECT_DIR$/Screen/QnA.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Screen/buy.html" afterPath="$PROJECT_DIR$/Screen/buy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Screen/cart.html" afterPath="$PROJECT_DIR$/Screen/cart.html" />
