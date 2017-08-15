@@ -12,6 +12,23 @@
   		crossorigin="anonymous">	
   	</script>
   	<!--각종 cdn 시작-->
+    <!--2단메뉴-->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">          
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+      $( function() {
+        $( "#menu" ).menu();
+      } );
+      </script>
+    <!--2단메뉴-->
+
 	<style type="text/css">
 		.swiper-container {
     		width: 100%;
@@ -24,8 +41,8 @@
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
-    <link rel="stylesheet" type="text/css" href="..\Style\company_information.css">
-    <link rel="stylesheet" type="text/css" href="..\Style\index.css">
+        <link rel="stylesheet" type="text/css" href="..\Style\company_information.css">
+        <link rel="stylesheet" type="text/css" href="..\Style\index.css">
         <link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
 </head>
@@ -37,15 +54,23 @@
   </div>
     <div id="second_top" class="basic">
         <div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
-            <div id="menu">menu</div>
-            <ul id="nav">
-                <li><a href="login.html">로그인</a></li>
-                <li><a href="mypage.html">마이페이지</a></li>
-                <li><a href="cart.html">장바구니</a></li>
-                <li><a href="notice.html">공지사항</a></li>
-                <li><a href="review.html">후기게시판</a></li>
-                <li><a href="QnA.html">QnA</a></li>
-                <li><a href="category.html">상품게시판</a></li>
+            <div id="menu_name">menu</div>
+            <ul id="menu">
+                <li class="small_font"><a href="login.html">로그인</a></li>
+                <li class="small_font"><a href="mypage.html">마이페이지</a></li>
+                <li class="small_font"><a href="cart.html">장바구니</a></li>
+                <li class="small_font"><a href="notice.html">공지사항</a></li>
+                <li class="small_font"><a href="review.html">후기게시판</a></li>
+                <li class="small_font"><a href="QnA.html">QnA</a></li>                
+                <li id="menu_tree"><a href="category.html" >상품게시판</a>
+                    
+                        <ul id="nav_tree">
+                            <li><div><a href="login.html">로그인</a></div></li>
+                            <li><div><a href="mypage.html">마이페이지</a></div></li>
+                            <li><div><a href="cart.html">장바구니</a></div></li>
+                        </ul>
+                    
+                </li>
             </ul>
         </div>
         <div id="logo" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></div>
@@ -94,9 +119,10 @@
   
 </body>
     <script type="text/javascript">
+        var nav_tree = $('#nav_tree');
         function menu_click(classname){
-        $('#menu_button').toggleClass('show_menu');
-    }
+            $('#menu_button').toggleClass('show_menu');
+        };
     </script>
 </html>
 
