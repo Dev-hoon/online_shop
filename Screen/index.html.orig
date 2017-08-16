@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app>
+<<<<<<< HEAD
+<html lang="ko">
+=======
+<html lang="ko" >
+>>>>>>> 7392ac1aa8f719c78c47af1fb4651355ea6ad2b4
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--각종 cdn 시작-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">	
+  	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js
+"></script>
+  	<!--각종 cdn 시작-->
+	<style type="text/css">
+		.swiper-container {
+    		width: 100%;
+    		height: 300px;
+		}  
+        .slide_img{
+           
+        }
+	</style>
+	<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+    <link rel="stylesheet" type="text/css" href="..\Style\company_information.css">
+    <link rel="stylesheet" type="text/css" href="..\Style\index.css">
+    <link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+	<!--css를 불러내기 위한 링크 태그 끝-->
+</head>
+<body>
+  <div id="common_top" class="basic">
+    <a href=".\join.html">회원가입</a>
+    <a href=".\login.html">로그인</a>
+    <a href=".\mypage.html">마이페이지</a>
+  </div>
+    <div id="second_top" class="basic">
+        <div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
+            <div id="menu">menu</div>
+            <ul id="nav">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="cart.html">장바구니</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="review.html">후기게시판</a></li>
+                <li><a href="QnA.html">QnA</a></li>
+                <li><a href="category.html">상품게시판</a></li>
+            </ul>
+        </div>
+        <div id="logo" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></div>
+        <div id="page_title" style="display: inline-block;">Online-Shop</div>
+    </div>
+    <div>
+<!-- 슬라이드 기능 추가 작업 (마이그레이션 필요: 기능구현만 해놓음.)-->
+	<!-- Slider main container -->
+        <div class="swiper-container">
+    <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+        <!-- Slides -->
+              <div class="swiper-slide"><img class="slide_img" src="C:\repo\online_shop\image\코트 index1.png" alt=""></div>
+               <div class="swiper-slide"><img class="slide_img" src="‪C:\repo\online_shop\image\index_2.jpg" alt=""></div>
+              <div class="swiper-slide"><img class="slide_img" src="‪C:\repo\online_shop\image\index_3.jpg" alt=""></div>
+        
+            </div>
+    <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+    
+    <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    
+    <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <div id="company_information">주영,혜인,태훈,선보 주식회사</div>
+        <script>        
+            var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            //direction: 'horizontal',
+            loop: true,
+            
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            
+            // And if we need scrollbar
+            //scrollbar: '.swiper-scrollbar',
+          })        
+        </script>
+  
+    </body>
+    <script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+    </script>
+</html>
+
