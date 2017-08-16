@@ -55,10 +55,10 @@
 			<div>(금액)원</div>
 			<div>현금영수증</div>
 			<div>
-				<input type="radio" value="발급" name="receipt">발급
-				<input type="radio" value="미발급" name="receipt">미발급
+				<input type="radio" value="발급" name="receipt" id="issued" onclick="selected()">발급
+				<input type="radio" value="미발급" name="receipt" id="not_issued" checked="checked" onclick="selected()">미발급
 			</div>
-			<div>
+			<div id="phone_number">
 				휴대전화 <input type="tel" name="phone_number">
 			</div>
 			<div><input type="checkbox" name="terms_ok">개인정보 판매자 제공에 동의합니다.</div>
@@ -77,7 +77,19 @@
 	</div>
 </body>
 <script type="text/javascript">
-        function menu_click(classname){
+	function selected()
+	{
+		if($("#issued").prop("checked")==true)
+		{
+			$("#phone_number").show();
+		}
+		if($("#not_issued").prop("checked")==true)
+		{
+			$("#phone_number").hide();
+		}
+	}
+	function menu_click(classname)
+	{
         $('#menu_button').toggleClass('show_menu');
     }
 </script>

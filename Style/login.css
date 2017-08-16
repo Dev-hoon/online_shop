@@ -30,6 +30,11 @@ body{
 	height: 4em;
 	width:4em;
 }
+.box
+{
+	margin:0.5em;
+	display: inline-block;
+}
 .button_find
 {
 	border:none;
