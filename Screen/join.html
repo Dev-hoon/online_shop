@@ -6,13 +6,7 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous">
-		function compare_pw_check(input_pw, input_pw_check){
-			if(input_pw != input_pw_check)
-				alert("비밀번호를 다시 확인해주십시오.");
-			}
-	
-		var input_pw = $('.write_PW').val();
-		var input_pw_check = $('.write_PW_check').val();
+
 	</script>
 <!--css를 불러내기 위한 링크 태그 시작-->
 	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
@@ -27,7 +21,8 @@
 		<a href=".\mypage.html">마이페이지</a>
 	</div>
 		<div id="second_top" class="basic">
-			<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
+			<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
+
 			<div id="page_title" style="display: inline-block;">Online-Shop</div>
 		</div>
 	<div>
@@ -40,12 +35,12 @@
 
 				<div class="column_name">PW</div>
 				<div class="column_contents">
-					<input type="password" name="pw">
+					<input type="password" name="pw" id="pw">
 				</div><br>
 
 				<div class="column_name">PW확인</div>
 				<div class="column_contents">
-					<input type="password" name="pw_check">
+					<input type="password" name="pw_check" id="pw_check" onblur="compare_PW_check()">
 				</div><br>
 
 				<div class="column_name">이름</div>
@@ -67,10 +62,10 @@
 				<div class="column_contents">
 					<input type="tel" name="phone">
 				</div><br>
-			</div>
+			</div><br>
 
 			<div class="basic">
-				이용약관 동의
+				※이용약관 동의
 				<div class="terms_box">
 					약관 내용
 				</div>
@@ -92,6 +87,15 @@
 			<input type="reset" name="reset" value="취소" class="button">	
 		</form>
 	</div>
-
 </body>
+<script type="text/javascript">
+	function compare_PW_check()
+	{
+		if($("#pw").val() != $("#pw_check").val())
+		{
+			alert("비밀번호를 다시 확인해주십시오.");
+			//$("pw_check").focus();
+		}
+	}
+</script>
 </html>

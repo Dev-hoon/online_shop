@@ -2,16 +2,14 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>payment</title>
+	<title>free board</title>
 	<style type="text/css">
-	</style>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
 		
-	</script>
+	</style>
 <!--css를 불러내기 위한 링크 태그 시작-->
 	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
-	<link rel="stylesheet" type="text/css" href="..\Style\payment.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\free_board.css">
 	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 <!--css를 불러내기 위한 링크 태그 끝-->
 <!--2단메뉴-->
@@ -30,7 +28,6 @@
       } );
       </script>
     <!--2단메뉴-->
-
 </head>
 <body>
 	<div id="common_top" class="basic">
@@ -38,8 +35,8 @@
 		<a href=".\login.html">로그인</a>
 		<a href=".\mypage.html">마이페이지</a>
 	</div>
-	<div id="second_top" class="basic">
-		<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
+		<div id="second_top" class="basic">
+			<div id="menu_button" style="display: inline-block;">
 			<div id="menu_name">menu</div>
 					<ul id="menu">
 						<li><a href="login.html">로그인</a></li>
@@ -56,64 +53,104 @@
 	                        </ul>                    
                 		</li>
 					</ul>
-		</div>
-		<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
-
+			</div>
+		<div class="inline_block"><img id="logo_img" src="..\image\logo.png"></div>
 		<div id="page_title" style="display: inline-block;">Online-Shop</div>
-	</div><br>
-	<div id="payment_box">
-		<div class="inline_block" >
-			<div>은행선택
-				<select>
-					<option>농협</option>
-					<option>국민은행</option>
-					<option>우리은행</option>
-					<option>하나은행</option>
-					<option>기업은행</option>
-					<option>신한은행</option>
-				</select>
-			</div>
-		<div class="inline_block">
-			<div>최종결제금액</div>
-			<div>(금액)원</div>
-			<div>현금영수증</div>
-			<div>
-				<input type="radio" value="발급" name="receipt" id="issued" onclick="selected()">발급
-				<input type="radio" value="미발급" name="receipt" id="not_issued" checked="checked" onclick="selected()">미발급
-			</div>
-			<div id="phone_number">
-				휴대전화 <input type="tel" name="phone_number">
-			</div>
-			<div><input type="checkbox" name="terms_ok">개인정보 판매자 제공에 동의합니다.</div>
-			<div class="terms_box">
-				약관내용
-			</div>
-			<div><input type="checkbox" name="terms_ok">개인정보 수집 및 이용에 동의합니다.</div>
-			<div class="terms_box">
-				약관내용
-			</div>
-			<div>
-				<input type="submit" value="결제">
-				<input type="reset" value="취소">
-			</div>
 		</div>
+	<div>
+	<table>
+		<thead>
+			<tr>
+				<td class="post_No">No</td>
+				<td class="post_title">제목</td>
+				<td class="created_date">작성일</td>
+				<td class="writer">작성자</td>
+				<td class="views">조회수</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>hello</td>
+				<td>17.07.25</td>
+				<td>작성자</td>
+				<td>1</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<div class="page_num">
+		<<
+		1
+		2
+		3
+		4
+		5
+		>>
 	</div>
 </body>
-<script type="text/javascript">
-	function selected()
-	{
-		if($("#issued").prop("checked")==true)
-		{
-			$("#phone_number").show();
-		}
-		if($("#not_issued").prop("checked")==true)
-		{
-			$("#phone_number").hide();
-		}
-	}
-	function menu_click(classname)
-	{
-        $('#menu_button').toggleClass('show_menu');
-    }
-</script>
 </html>

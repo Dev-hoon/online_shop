@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SHOPPINGBASKET</title>
+
+	<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">	
+  	</script>
 	
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
@@ -10,6 +16,23 @@
 		<link rel="stylesheet" type="text/css" href="‪..\Style\cart.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
+	<!--2단메뉴-->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">          
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+      $( function() {
+        $( "#menu" ).menu();
+      } );
+      </script>
+    <!--2단메뉴-->
+
 	<style type="text/css">
 		.container{
             display: flex;
@@ -37,66 +60,12 @@
         	padding: 10px;
         	width: 90%;
         }
-         body {
+body {
 		  margin: 0;
 		  font-family: 'Muli', sans-serif;
 		}
 
-		#menu_button {
-		  font-weight: 100;
-		  background: #efefef;
-		  width: 170px;
-		  height: 10%;
-		  padding-right: : 50px;
-		  position: fixed;
-		  z-index: 100;
-		  -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-		  box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-		  left: -130px;
-		  transition: all 0.3s;
-		  -webkit-transition: all 0.3s;
-		  color: #222;
-		}
-		#menu_button:hover, #menu_button:focus {
-		  transform: translate3d(130px, 0, 0);
-		  animation-timing-function: 1s ease-in;
-		  height: 100%;
-		}
-		#menu_button #menu {
-		  top: 50%;
-		  position: absolute;
-		  top: 50%;
-		  -webkit-transform: translateY(-50%);
-		  -ms-transform: translateY(-50%);
-		  transform: translateY(-50%);
-		  transform: rotate(270deg);
-		  right: 10px;
-		  font-weight: 800;
-		  font-size: 15px;
-		}
-		#menu_button #nav {
-		  position: absolute;
-		  top: 50%;
-		  -webkit-transform: translateY(-50%);
-		  -ms-transform: translateY(-50%);
-		  transform: translateY(-50%);
-		  font-weight: 100;
-		}
-		#menu_button #nav li {
-		  padding-bottom: 30px;
-		  list-style-type: none;
-		}
-		#menu_button #nav li a {
-		  display: block;
-		  text-decoration: none;
-		  color: inherit;
-		  transition: all 0.3s;
-		  -webkit-transition: all 0.3s;
-		}
-		#menu_button #nav li a:hover {
-		  color: #aaa;
-		}
-         
+		
 		table{
 			display: flex;
 
@@ -133,20 +102,26 @@
 				<a href="./mypage.html">마이페이지</a>
 			</div>
 			<div id="second_top">
-				<div id="menu_button" style="display: inline-block;">
-					<div id="menu">menu</div>
-					<ul id="nav">
+				<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
+					<div id="menu_name">menu</div>
+					<ul id="menu">
 						<li><a href="login.html">로그인</a></li>
 						<li><a href="mypage.html">마이페이지</a></li>
 						<li><a href="cart.html">장바구니</a></li>
 						<li><a href="notice.html">공지사항</a></li>
 						<li><a href="review.html">후기게시판</a></li>
 						<li><a href="QnA.html">QnA</a></li>
-						<li><a href="category.html">상품게시판</a></li>
+						<li id="menu_tree"><a href="category.html" >상품게시판</a>
+	                        <ul id="nav_tree">
+	                            <li><div><a href="login.html">로그인</a></div></li>
+	                            <li><div><a href="mypage.html">마이페이지</a></div></li>
+	                            <li><div><a href="cart.html">장바구니</a></div></li>
+	                        </ul>                    
+                		</li>
 					</ul>
 				</div>
 				<a href="./index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
-				<div id="page_title" class="inline_block">장바구니</div>
+				<div id="page_title" style="display: inline-block;">Online-Shop</div>
 			</div>
 		</header>
 		<section class="content">
@@ -180,4 +155,10 @@
 		</section>
 	</div>
 </body>
+
+ <script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+  </script>
 </html>
