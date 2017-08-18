@@ -93,8 +93,13 @@
 	{
 		if($("#pw").val() != $("#pw_check").val())
 		{
-			alert("비밀번호를 다시 확인해주십시오.");
-			//$("pw_check").focus();
+			var check=confirm("비밀번호를 다시 확인해주십시오.");
+			$("#pw_check").focus();
+			/*if(check==true)
+			{
+				$("#pw_check").focus();
+			}
+			*/
 		}
 	}
 </script>
