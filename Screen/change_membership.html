@@ -9,10 +9,17 @@
   		crossorigin="anonymous">	
   	</script>
 
-	<style type="text/css">
-
-
-	</style>
+	<!--각종 cdn 시작-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+	<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">	
+  	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js
+"></script>
+  	<!--각종 cdn 시작-->
 	<!--css를 불러내기 위한 링크 태그 시작-->
 	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
@@ -109,7 +116,7 @@
 		<div>
 			<div class="address">주소</div>
 			<input type="text" name="find_postcode">
-			<a href="https://www.epeople.go.kr/jsp/common/co/CoZipcode2.jsp?frm=null&basezip=null&adr1=null&adr2=null&scode=null&jgubun=null&gubun=new"><input type="button" value="우편번호 찾기>" name="find_postcode"></a> <!--도로명주소 찾는 페이지 링크-->
+			<input type="button" value="우편번호 찾기>" name="find_postcode" onclick="location.href='https://www.epeople.go.kr/jsp/common/co/CoZipcode2.jsp?frm=null&basezip=null&adr1=null&adr2=null&scode=null&jgubun=null&gubun=new'"> <!--도로명주소 찾는 페이지 링크-->
 			<br>
 			<input type="text" class="input_address">
 		</div>
