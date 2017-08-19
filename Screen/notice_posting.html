@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Posting</title>
+	<script
+  		src="http://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">	
+  	</script>
+  	
+	<style type="text/css">
+
+	</style>
+<!--css를 불러내기 위한 링크 태그 시작-->
+	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\notice_posting.css">
+	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+<!--css를 불러내기 위한 링크 태그 끝-->
+</head>
+<body>
+	<!--공통부분 시작-->
+	<div id="common_top" class="basic">
+		<a href=".\join.html">회원가입</a>
+		<a href=".\login.html">로그인</a>
+		<a href=".\mypage.html">마이페이지</a>
+	</div>
+		<div id="second_top" class="basic">
+			<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
+
+				<div id="menu">menu</div>
+				<ul id="nav">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="mypage.html">마이페이지</a></li>
+					<li><a href="cart.html">장바구니</a></li>
+					<li><a href="notice.html">공지사항</a></li>
+					<li><a href="review.html">후기게시판</a></li>
+					<li><a href="QnA.html">QnA</a></li>
+					<li><a href="category.html">상품게시판</a></li>
+				</ul>
+			</div>
+			<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
+
+		<div id="page_title" class="inline_block">Posting notice</div>
+	</div>	
+	<!--공통부분 끝-->
+	<div class="write_part">
+		<input type="text" name="title_text" class="title_text" value="제목을 작성해 주세요."><br>
+		<textarea class="write_text">이곳에 내용을 써주세요.</textarea><br>
+		<input type="submit" name="posting_button" value="작성" class="button">
+		<input type="button" name="posting_button" value="취소" class="button">
+	</div>
+</body>
+<script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+</script>
+</html>
