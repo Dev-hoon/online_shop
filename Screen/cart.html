@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>SHOPPINGBASKET</title>
+	<title>cart</title>
 
 	<script
   		src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -16,6 +16,23 @@
 		<link rel="stylesheet" type="text/css" href="‪..\Style\cart.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
+	<!--2단메뉴-->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">          
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+      $( function() {
+        $( "#menu" ).menu();
+      } );
+      </script>
+    <!--2단메뉴-->
+
 	<style type="text/css">
 		.container{
             display: flex;
@@ -48,67 +65,7 @@ body {
 		  font-family: 'Muli', sans-serif;
 		}
 
-		#menu_button {
-			font-weight: 100;
-			background: #f1f7ef;
-			width: 40px;
-			height: 10%;
-			left: -10px;
-			padding-right: : 50px;
-			position: fixed;
-			z-index: 100;
-			-webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-			box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);	  
-			transition: all 0.3s;
-			-webkit-transition: all 0.3s;
-			color: #222;
-			float : left;
-			/*테두리 둥글게 해주는 코드 시작*/
-			-webkit-border-radius: .5em;
-  			-moz-border-radius: .5em;
- 			border-radius: .5em;
- 			/*테두리 둥글게 해주는 코드 끝*/
- 			border: 1px solid black;
-		}
-		#menu_button #menu {
-		  position: absolute;
-		  top: 40%;
-		  -webkit-transform: translateY(-50%);
-		  -ms-transform: translateY(-50%);
-		  transform: translateY(-50%);
-		  transform: rotate(270deg);
-		  
-		  font-weight: 800;
-		  font-size: 15px;
-		}
-		#menu_button #nav {
-		  position: absolute;
-		  top: 50%;
-		  left: -130px;
-		  -webkit-transform: translateY(10%);
-		  -ms-transform: translateY(10%);
-		  transform: translateY(10%);
-		  font-weight: 100;
-		}
-		#menu_button #nav li {
-		  padding-bottom: 30px;
-		  list-style-type: none;
-		}
-		#menu_button #nav li a {
-		  display: block;
-		  text-decoration: none;
-		  color: inherit;
-		  transition: all 0.3s;
-		  -webkit-transition: all 0.3s;
-		}
-		#menu_button #nav li a:hover {
-		  color: #aaa;
-		}     
-		.show_menu{
-			height: 100%;
-			transform: translate3d(130px,0,0);
-			animation-timing-function: 1s ease-in;
-		}
+		
 		table{
 			display: flex;
 
@@ -146,19 +103,25 @@ body {
 			</div>
 			<div id="second_top">
 				<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
-					<div id="menu">menu</div>
-					<ul id="nav">
+					<div id="menu_name">menu</div>
+					<ul id="menu">
 						<li><a href="login.html">로그인</a></li>
 						<li><a href="mypage.html">마이페이지</a></li>
 						<li><a href="cart.html">장바구니</a></li>
 						<li><a href="notice.html">공지사항</a></li>
 						<li><a href="review.html">후기게시판</a></li>
 						<li><a href="QnA.html">QnA</a></li>
-						<li><a href="category.html">상품게시판</a></li>
+						<li id="menu_tree"><a href="category.html" >상품게시판</a>
+	                        <ul id="nav_tree">
+	                            <li><div><a href="login.html">로그인</a></div></li>
+	                            <li><div><a href="mypage.html">마이페이지</a></div></li>
+	                            <li><div><a href="cart.html">장바구니</a></div></li>
+	                        </ul>                    
+                		</li>
 					</ul>
 				</div>
 				<a href="./index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
-				<div id="page_title" class="inline_block">장바구니</div>
+				<div id="page_title" style="display: inline-block;">Online-Shop</div>
 			</div>
 		</header>
 		<section class="content">
@@ -182,7 +145,7 @@ body {
 				<div id="total">배송비: 0원 총금액:36,000원</div>
 				<div id="order">
 					<form action="">
-						<input type="submit" name="order" value="주문하기" onclick="location.href = 'buy.html'"> <input type="submit" name="shopping" value="쇼핑하기">
+						<input type="button" name="order" value="주문하기" onclick="location.href ='./buy.html'"> <input type="button" name="shopping" value="쇼핑하기" onclick="location.href ='./category.html'">
 					</form>
 				</div>
 			</main>

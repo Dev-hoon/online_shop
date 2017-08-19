@@ -9,6 +9,29 @@
   		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   		crossorigin="anonymous">	
   	</script>
+	
+	<!--css를 불러내기 위한 링크 태그 시작-->
+		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
+		<link rel="stylesheet" type="text/css" href="‪..\Style\cart.css">
+		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
+	<!--css를 불러내기 위한 링크 태그 끝-->
+	<!--2단메뉴-->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous">          
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+      $( function() {
+        $( "#menu" ).menu();
+      } );
+      </script>
+    <!--2단메뉴-->
 
 	<style type="text/css">
 		.container{
@@ -18,16 +41,16 @@
         header{
             border-bottom:1px solid gray;
             padding-left:20px;
-            height: 320px;
+            height: 200px;
         }
 		 .content{
             display:flex;
         }
          .content nav{
-            border-right:1px solid gray;
+            
         }
         .content aside{
-            border-left:1px solid gray;    
+           
         }
         nav, aside{
             flex-basis: 150px;
@@ -35,8 +58,9 @@
         }
         main{
         	padding: 10px;
+        	width: 90%;
         }
-		body {
+body {
 		  margin: 0;
 		  font-family: 'Muli', sans-serif;
 		}
@@ -63,7 +87,7 @@
  			/*테두리 둥글게 해주는 코드 끝*/
  			border: 1px solid black;
 		}
-		#menu_button #menu {
+		#menu_button #menu_name {
 		  position: absolute;
 		  top: 40%;
 		  -webkit-transform: translateY(-50%);
@@ -74,7 +98,7 @@
 		  font-weight: 800;
 		  font-size: 15px;
 		}
-		#menu_button #nav {
+		#menu_button #menu {
 		  position: absolute;
 		  top: 50%;
 		  left: -130px;
@@ -83,18 +107,18 @@
 		  transform: translateY(10%);
 		  font-weight: 100;
 		}
-		#menu_button #nav li {
+		#menu_button #menu li {
 		  padding-bottom: 30px;
 		  list-style-type: none;
 		}
-		#menu_button #nav li a {
+		#menu_button #menu li a {
 		  display: block;
 		  text-decoration: none;
 		  color: inherit;
 		  transition: all 0.3s;
 		  -webkit-transition: all 0.3s;
 		}
-		#menu_button #nav li a:hover {
+		#menu_button #menu li a:hover {
 		  color: #aaa;
 		}     
 		.show_menu{
@@ -105,19 +129,21 @@
          
 		table.buy_info{
 			display: flex;
-
 		}
 		table.buy_info th{
-			background-color: skyblue;
+			background-color: #d6e8e5;
 		}
 		#amount{
 			width: 40px;
 			text-align: right;
 		}
+		.goods_name{
+			width: 66%;
+		}
 		#total{
-			background-color: skyblue;
-			border-top: 1px solid red;
-			border-bottom: 1px solid red;
+			background-color: #d6e8e5;
+			height: 30px;
+			font-size: 20px;
 			margin-top: 10px;
 			text-align: right;
 		}
@@ -162,14 +188,6 @@
 			margin: 20px;
 		}
 	</style>
-
-	<!--css를 불러내기 위한 링크 태그 시작-->
-	<link rel="stylesheet" type="text/css" href="‪..\Style\buy.css">
-	<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
-	<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
-
-	<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
-	<!--css를 불러내기 위한 링크 태그 끝-->
 </head>
 <body>
 	<div class="container">
@@ -181,23 +199,26 @@
 			</div>
 			<div id="second_top">
 				<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
-					<div id="menu">menu</div>
-					<ul id="nav">
+					<div id="menu_name">menu</div>
+					<ul id="menu">
 						<li><a href="login.html">로그인</a></li>
 						<li><a href="mypage.html">마이페이지</a></li>
 						<li><a href="cart.html">장바구니</a></li>
 						<li><a href="notice.html">공지사항</a></li>
 						<li><a href="review.html">후기게시판</a></li>
 						<li><a href="QnA.html">QnA</a></li>
-						<li><a href="category.html">상품게시판</a></li>
+						<li id="menu_tree"><a href="category.html" >상품게시판</a>
+	                        <ul id="nav_tree">
+	                            <li><div><a href="login.html">로그인</a></div></li>
+	                            <li><div><a href="mypage.html">마이페이지</a></div></li>
+	                            <li><div><a href="cart.html">장바구니</a></div></li>
+	                        </ul>                    
+                		</li>
 					</ul>
 				</div>
-
+				<a href="./index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
 				<div id="page_title" style="display: inline-block;">Online-Shop</div>
-
 				<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
-				<div id="page_title" class="inline_block">구매</div>
-
 			</div>
 		</header>
 		<section class="content">
@@ -211,7 +232,7 @@
 				<div>
 					<table class="buy_info">
 						<tr >
-							<th><input type="checkbox"></th><th>상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th>
+							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th>
 						</tr>
 						<tr>
 							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td>
@@ -223,8 +244,8 @@
 					<div><h4>배송지 정보 입력</h4></div>
 					<form action="">
 						<div>
-							<input type="radio" name="lately">최근배송지
-							<input type="radio" name="new">신규배송지
+							<input type="radio" name="shipping" checked="checked">최근배송지
+							<input type="radio" name="shipping">신규배송지
 						</div>
 						<div class="delivery_detail">
 						 	<form action="">
@@ -254,7 +275,7 @@
 									<tr>
 										<th></th>
 										<td class="end_btn">
-											<input class="move_page" type="submit" value="결제페이지로 이동" onclick=""><input class="move_page" type="button" value="취소" onclick="">
+											<input class="move_page" type="button" value="결제페이지로 이동" onclick="location.href='./payment.html'"><input class="move_page" type="button" value="취소" onclick="location.href='history.back()'">
 										</td>
 									</tr>
 								</table>
@@ -269,9 +290,10 @@
 		</section>
 	</div>
 </body>
-<script type="text/javascript">
+
+ <script type="text/javascript">
         function menu_click(classname){
         $('#menu_button').toggleClass('show_menu');
     }
-</script>
+  </script>
 </html>
