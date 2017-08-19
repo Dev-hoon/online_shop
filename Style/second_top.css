@@ -13,12 +13,20 @@
 	position: absolute;
 	left: 35%;
 }
-#page_title
-{
+#page_title_onlineShop{
 	font-size: 45px;
 	position: absolute;
 	left: 45%;
 	top: 10%;
+	text-align: center;
+	font-family: 'Royalacid_o' !important;
+}
+#page_title
+{
+	font-size: 45px;
+	position: absolute;
+	left: 42%;
+	top: 3%;
 	text-align: center;
 	font-family: 'Royalacid_o' !important;
 }
