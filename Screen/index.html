@@ -27,7 +27,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script>
-      $( function() {
+        $( function() {
         $( "#menu" ).menu();
       } );
       </script>
@@ -75,16 +75,16 @@
                 <li id="menu_tree"><a href="category.html" >상품게시판</a>
                     
                         <ul id="nav_tree">
-                            <li><div><a href="login.html">로그인</a></div></li>
-                            <li><div><a href="mypage.html">마이페이지</a></div></li>
-                            <li><div><a href="cart.html">장바구니</a></div></li>
+                            <li><a href="login.html">로그인</a></li>
+                            <li><a href="mypage.html">마이페이지</a></li>
+                            <li><a href="cart.html">장바구니</a></li>
                         </ul>
                     
                 </li>
             </ul>
         </div>
-        <div id="logo" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></div>
-        <div id="page_title_onlineShop" style="display: inline-block;">Online-Shop</div>
+        <a href=".\index.html" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></a>
+        <div onclick="location.href='index.html'" id="page_title_onlineShop" style="display: inline-block;">Online-Shop</div>
     </div>
     <div>
 <!-- 슬라이드 기능 추가 작업 (마이그레이션 필요: 기능구현만 해놓음.)-->
