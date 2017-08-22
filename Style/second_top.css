@@ -14,6 +14,7 @@
 	left: 35%;
 }
 #page_title_onlineShop{
+	cursor:pointer;
 	font-size: 45px;
 	position: absolute;
 	left: 45%;
