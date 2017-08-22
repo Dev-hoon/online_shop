@@ -36,7 +36,7 @@
 		<a href=".\mypage.html">마이페이지</a>
 	</div>
 		<div id="second_top" class="basic">
-			<div id="menu_button" style="display: inline-block;">
+			<div id="menu_button" onclick="menu_click('menu')" style="display: inline-block;">
 			<div id="menu_name">menu</div>
 					<ul id="menu">
 						<li><a href="login.html">로그인</a></li>
@@ -143,14 +143,28 @@
 	</table>
 	<br>
 	<br>
-	<div class="page_num">
-		<<
-		1
-		2
-		3
-		4
-		5
-		>>
+	<div class="bottom">
+		<div class="search_part" style="display: inline-block;">
+			<input type="text" name="search" class="search_text">
+			<input type="button" class="search_button" name="search" value="검색" class="writing_search">
+		</div>
+		<div class="page_num" style="display: inline-block;">
+			<<
+			1
+			2
+			3
+			4
+			5
+			>>
+		</div>
+		<div class="writing_button_part" style="display: inline-block;">
+			<input type="button" value="쓰기" onclick="location.href='free_board_posting.html'" class="writing_button">
+		</div>
 	</div>
 </body>
+<script type="text/javascript">
+        function menu_click(classname){
+        $('#menu_button').toggleClass('show_menu');
+    }
+</script>
 </html>
