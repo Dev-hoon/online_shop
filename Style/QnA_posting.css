@@ -1,0 +1,21 @@
+.write_part{
+	margin: 70px;
+	text-align: center;
+}
+.title_text{
+	margin: 10px auto;
+	width: 800px;
+	height: 20px;
+}
+.write_text{
+	margin: 10px auto;
+	width: 800px;
+	height: 300px;
+}
+.button{
+	border: black;
+	background-color: #244169;
+	color: white;
+	height: 30px;
+	width: 70px;
+}

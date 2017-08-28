@@ -1,12 +1,10 @@
 table
 {
-	position: relative;
-	width: 60%;
+	margin: 50px auto;
+	width: 900px;
 	border: 1px solid black;
 	border-collapse: collapse;
-	text-align:center;
-	margin: auto;
-	margin-top: 40px;
+	text-align:center
 }
 th,td
 {
@@ -22,6 +20,32 @@ thead
 }
 .page_num{
 	position: relative;
-	float: right;
-	right: 30%;
+	left: 45%;
+}
+.search_part{
+	position: absolute;
+	left: 15%;
+}
+.search_text{
+	width: 200px;
+	height: 20px;
+}
+.search_button {
+	border: black;
+	background-color: #244169;
+	color: white;
+	height: 25px;
+	width: 55px;
+}
+.writing_button_part{
+	position: absolute;
+	left: 80%;
+}
+.writing_button{
+	border: black;
+	background-color: #244169;
+	color: white;
+	height: 25px;
+	width: 55px;
+	cursor:pointer;
 }

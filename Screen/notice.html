@@ -29,11 +29,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script>
-      $( function() {
-        $( "#menu" ).menu();
-      } );
-      </script>
+   
     <!--2단메뉴-->
 
 </head>
@@ -56,16 +52,15 @@
 						<li><a href="QnA.html">QnA</a></li>
 						<li id="menu_tree"><a href="category.html" >상품게시판</a>
 	                        <ul id="nav_tree">
-	                            <li><div><a href="login.html">로그인</a></div></li>
-	                            <li><div><a href="mypage.html">마이페이지</a></div></li>
-	                            <li><div><a href="cart.html">장바구니</a></div></li>
+	                            <li><a href="login.html">로그인</a></li>
+	                            <li><a href="mypage.html">마이페이지</a></li>
+	                            <li><a href="cart.html">장바구니</a></li>
 	                        </ul>                    
                 		</li>
 					</ul>
 			</div>
-			<a href=".\index.html" class="inline_block"><img id="logo_img" src="..\image\logo.png"></a>
-
-		<div id="page_title_onlineShop" style="display: inline-block;">Online-Shop</div>
+			<a href=".\index.html" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></a>
+       		<div onclick="location.href='index.html'" id="page_title_onlineShop" style="display: inline-block;">Online-Shop</div>
 		</div>
 	<div>
 	<table>
@@ -153,14 +148,23 @@
 	</table>
 	<br>
 	<br>
-	<div class="page_num">
-		<<
-		1
-		2
-		3
-		4
-		5
-		>>
+	<div class="bottom">
+		<div class="search_part" style="display: inline-block;">
+			<input type="text" name="search" class="search_text">
+			<input type="button" class="search_button" name="search" value="검색" class="writing_search">
+		</div>
+		<div class="page_num" style="display: inline-block;">
+			<<
+			1
+			2
+			3
+			4
+			5
+			>>
+		</div>
+		<div class="writing_button_part" style="display: inline-block;">
+			<input type="button" value="쓰기" onclick="location.href='notice_posting.html'" class="writing_button">
+		</div>
 	</div>
 </body>
 

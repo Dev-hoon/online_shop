@@ -10,95 +10,62 @@
 			height: 10%;
 			left: -10px;
 			padding-right: : 50px;
-			position: fixed;
-			z-index: 100;
-			-webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-			box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);	  
-			transition: all 0.3s;
-			-webkit-transition: all 0.3s;
+			position: fixed;			
+			box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);	  			
 			color: #222;
 			float : left;
-			/*테두리 둥글게 해주는 코드 시작*/
-			-webkit-border-radius: .5em;
-  			-moz-border-radius: .5em;
+			/*테두리 둥글게 해주는 코드 시작*/	
  			border-radius: .5em;
  			/*테두리 둥글게 해주는 코드 끝*/
  			border: 1px solid black;
 		}
-		#menu_button #menu_name {
+		#menu_name {
 		  position: absolute;
 		  top: 40%;
-		  -webkit-transform: translateY(-50%);
-		  -ms-transform: translateY(-50%);
 		  transform: translateY(-50%);
 		  transform: rotate(270deg);
 		  font-weight: 800;
 		  font-size: 15px;
 		}
-		#menu_button #menu {
-		  position: absolute;
-		  top: 50%;
-		  left: -130px;
-		  -webkit-transform: translateY(10%);
-		  -ms-transform: translateY(10%);
-		  transform: translateY(10%);
-		  font-weight: 100;
+		#menu {
+			list-style: none;
+			position: absolute;
+			top: 50%;
+			left: -130px;	
+			font-weight: 100;
 		}
-		#menu_button #menu li {
-		  padding-bottom: 20px;
-		  list-style-type: none;
+		#menu li {
+			padding-bottom: 20px;
+			list-style-type: none;
 		}
-		#menu_button #menu li a {
-		  display: block;
+		#menu li a {
 		  text-decoration: none;
 		  color: inherit;
 		  transition: all 0.3s;
-		  -webkit-transition: all 0.3s;
 		}
-		#menu_button #menu li a:hover {
+		#menu li:hover {
 		  	color: #aaa;
 		}     
+		ul ul li{
+      		color: black;
+      	}
+      	ul ul li:hover{
+      		color: #aaa;
+      	}	
+      	ul ul{
+        display: none;
+        
+      	}
+      	ul li:hover > ul{
+        display: block;
+      	}
+
 		.show_menu{
 			height: 100%;
 			transform: translate3d(130px,0,0);
-			animation-timing-function: 1s ease-in;
-			
+			animation-timing-function: 1s ease-in;			
 		}
 		#nav{
 			background-color: #d6e8e0;
 		}
-		
-		/*---------------------------------*/
 
-		/*#menu_button ul #menu_tree {
-            float:left;
-            list-style-type:none;
-            left: 200px;
-        }
-
-        #menu_button a {
-            height:16px;
-            color:gray;
-            text-decoration:none;
-        }
-
-        #menu_button a:hover {
-            color:#D4F4FA;
-            border-bottom:3px solid #FAED7D;
-        }
-
-        #menu_button ul ul {
-            display:none;
-            position:absolute;
-            background-color:#5c5c5c;
-        }
-
-        #menu_button ul li:hover ul {
-            display: block;
-        }
-
-        #menu_button ul #nav_tree li {
-            float:none;
-        }
-		*/
-		
