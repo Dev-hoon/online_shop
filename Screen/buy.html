@@ -131,10 +131,11 @@ body {
 		}
 		#amount{
 			width: 40px;
+			height:18px;
 			text-align: right;
 		}
 		.goods_name{
-			width: 66%;
+			width: 60%;
 		}
 		#total{
 			background-color: #d6e8e5;
@@ -143,7 +144,9 @@ body {
 			margin-top: 10px;
 			text-align: right;
 		}
-		
+		.table_head{
+			width:10%;
+		}
 		.delivery{
 			margin-top: 100px; 
 		}
@@ -227,10 +230,10 @@ body {
 				<div>
 					<table class="buy_info">
 						<tr >
-							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th>
+							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th class="table_head">정가</th><th class="table_head">판매가</th><th class="table_head">수량</th><th class="table_head">합계</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="number" name="amount" value="2"><input type="submit" name="change" value="변경"></td><td>36,000원</td>
 						</tr>
 					</table>
 				</div>
