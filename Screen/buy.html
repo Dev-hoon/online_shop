@@ -251,13 +251,13 @@ body {
 									<tr>
 										<th>받으시는 분</th>
 										<td>
-											<input class="input" id="input_name" type="text" name="reciver">
+											<input class="input" id="input_name" type="text" name="receiver">
 										</td>
 									</tr>
 									<tr>
 										<th>주소</th>
 										<td>
-											<input class="input" id="input_address" type="text" name="address">	<input type="button" id="postnum" value="우편번호" onclick=""> <br>
+											<input class="input" id="input_address" type="text" name="address">	<input type="button" id="postnum" value="우편번호" onclick="openPopup();"> <br>
 											<input type="text" id="address_detail" name="address_detail"> <br>
 										</td>
 									</tr>
@@ -299,6 +299,10 @@ body {
 			else{
                 location.href='./payment.html'
 			}
+		}
+		function openPopup(){
+    	    window.open("https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm", "postNum", "width=550, height=500");
+
 		}
   </script>
 </html>
