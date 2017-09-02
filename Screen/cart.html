@@ -70,10 +70,23 @@ body {
 			background-color: #d6e8e5;
 		}
 		.goods_name{
-			width: 62%;
+			width: 60%;
+		}
+		.table_info_count{
+			width: 10%;
+		}
+		.table_info_price{
+			width: 10%;
+		}
+		.table_info_total{
+			width: 10%;
+		}
+		.table_info_ex{
+			width: 6%;
 		}
 		#amount{
 			width: 40px;
+			height:18px;
 			text-align: right;
 		}
 		#total{
@@ -131,10 +144,10 @@ body {
 				<div>
 					<table>
 						<tr >
-							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th><th>기타</th>
+							<th><input type="checkbox" id="all_checked"></th><th class="goods_name">상품명</th><th class="table_info_price">정가</th><th class="table_info_price">판매가</th><th class="table_info_count">수량</th><th class="table_info_total">합계</th><th class="table_info_ex">기타</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td><td><input type="submit" name="delete" value="삭제"></td>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="number" name="amount" value="2"><input type="submit" name="change" value="변경"></td><td>36,000원</td><td><input type="submit" name="delete" value="삭제"></td>
 						</tr>
 					</table>
 				</div>
@@ -153,8 +166,18 @@ body {
 </body>
 
  <script type="text/javascript">
-        function menu_click(classname){
-        $('#menu_button').toggleClass('show_menu');
-    }
+	 function menu_click(classname) {
+         $('#menu_button').toggleClass('show_menu');
+     }
+     $(function() {
+	     $("#all_checked").click(function(){
+	         if($("#all_checked").prop("checked")) {
+                 $("input[type=checkbox]").prop("checked", true);
+             }
+             else{
+	         $("input[type=checkbox]").prop("checked",false);
+	         }
+         })
+     })
   </script>
 </html>
