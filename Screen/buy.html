@@ -251,20 +251,19 @@ body {
 									<tr>
 										<th>받으시는 분</th>
 										<td>
-											<input class="input" type="text" name="reciver">
+											<input class="input" id="input_name" type="text" name="reciver">
 										</td>
 									</tr>
 									<tr>
 										<th>주소</th>
 										<td>
-											<input class="input" type="text" name="address">	<input type="button" value="우편번호" onclick=""> <br>
-											<input type="text" name="address_detail"> <br>
-											<input type="text" name="address_detail">
+											<input class="input" id="input_address" type="text" name="address">	<input type="button" id="postnum" value="우편번호" onclick=""> <br>
+											<input type="text" id="address_detail" name="address_detail"> <br>
 										</td>
 									</tr>
 									<tr>
 										<th>휴대전화</th>
-										<td><input class="phone" type="text">-<input class="phone" type="text">-<input class="phone" type="text"></td>
+										<td><input class="phone" id="phone1" type="text">-<input class="phone" id="phone2" type="text">-<input class="phone" id="phone3" type="text"></td>
 									</tr>
 									<tr>
 										<th>배송시 요구사항</th>
@@ -273,7 +272,7 @@ body {
 									<tr>
 										<th></th>
 										<td class="end_btn">
-											<input class="move_page" type="button" value="결제페이지로 이동" onclick="location.href='./payment.html'"><input class="move_page" type="button" value="취소" onclick="location.href='history.back()'">
+											<input class="move_page" type="button" value="결제페이지로 이동" onclick="check_blank();"><input class="move_page" type="button" value="취소" onclick="location.href='history.back()'">
 										</td>
 									</tr>
 								</table>
@@ -293,5 +292,13 @@ body {
         function menu_click(classname){
         $('#menu_button').toggleClass('show_menu');
     }
+    	function check_blank(){
+            if (input_name.value==='' || input_address.value==='' || address_detail.value==='' || phone1.value==='' || phone2.value==='' || phone3.value==='') {
+				alert('모든 정보를 입력해주세요.');
+			}
+			else{
+                location.href='./payment.html'
+			}
+		}
   </script>
 </html>
