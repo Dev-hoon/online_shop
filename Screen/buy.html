@@ -13,7 +13,7 @@
 	<!--css를 불러내기 위한 링크 태그 시작-->
 		<link rel="stylesheet" type="text/css" href="..\Style\common_top.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\second_top.css">
-		<link rel="stylesheet" type="text/css" href="‪..\Style\cart.css">
+		<link rel="stylesheet" type="text/css" href="‪..\Style\buy.css">
 		<link rel="stylesheet" type="text/css" href="..\Style\common_menu.css">
 	<!--css를 불러내기 위한 링크 태그 끝-->
 	<!--2단메뉴-->
@@ -131,10 +131,11 @@ body {
 		}
 		#amount{
 			width: 40px;
+			height:18px;
 			text-align: right;
 		}
 		.goods_name{
-			width: 66%;
+			width: 60%;
 		}
 		#total{
 			background-color: #d6e8e5;
@@ -143,7 +144,9 @@ body {
 			margin-top: 10px;
 			text-align: right;
 		}
-		
+		.table_head{
+			width:10%;
+		}
 		.delivery{
 			margin-top: 100px; 
 		}
@@ -227,10 +230,10 @@ body {
 				<div>
 					<table class="buy_info">
 						<tr >
-							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th>정가</th><th>판매가</th><th>수량</th><th>합계</th><th>배송예정일</th>
+							<th><input type="checkbox"></th><th class="goods_name">상품명</th><th class="table_head">정가</th><th class="table_head">판매가</th><th class="table_head">수량</th><th class="table_head">합계</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="text" name="amount" value="2"><br> <input type="submit" name="change" value="변경"></td><td>36,000원</td><td>2일 이내</td>
+							<td><input type="checkbox" name=""></td><td>물품사진과 물품명</td><td>20000원</td><td>18000원<br>10%</td><td><input id="amount" type="number" name="amount" value="2"><input type="submit" name="change" value="변경"></td><td>36,000원</td>
 						</tr>
 					</table>
 				</div>
@@ -248,20 +251,19 @@ body {
 									<tr>
 										<th>받으시는 분</th>
 										<td>
-											<input class="input" type="text" name="reciver">
+											<input class="input" id="input_name" type="text" name="receiver">
 										</td>
 									</tr>
 									<tr>
 										<th>주소</th>
 										<td>
-											<input class="input" type="text" name="address">	<input type="button" value="우편번호" onclick=""> <br>
-											<input type="text" name="address_detail"> <br>
-											<input type="text" name="address_detail">
+											<input class="input" id="input_address" type="text" name="address">	<input type="button" id="postnum" value="우편번호" onclick="openPopup();"> <br>
+											<input type="text" id="address_detail" name="address_detail"> <br>
 										</td>
 									</tr>
 									<tr>
 										<th>휴대전화</th>
-										<td><input class="phone" type="text">-<input class="phone" type="text">-<input class="phone" type="text"></td>
+										<td><input class="phone" id="phone1" type="text">-<input class="phone" id="phone2" type="text">-<input class="phone" id="phone3" type="text"></td>
 									</tr>
 									<tr>
 										<th>배송시 요구사항</th>
@@ -270,7 +272,7 @@ body {
 									<tr>
 										<th></th>
 										<td class="end_btn">
-											<input class="move_page" type="button" value="결제페이지로 이동" onclick="location.href='./payment.html'"><input class="move_page" type="button" value="취소" onclick="location.href='history.back()'">
+											<input class="move_page" type="button" value="결제페이지로 이동" onclick="check_blank();"><input class="move_page" type="button" value="취소" onclick="location.href='history.back()'">
 										</td>
 									</tr>
 								</table>
@@ -290,5 +292,17 @@ body {
         function menu_click(classname){
         $('#menu_button').toggleClass('show_menu');
     }
+    	function check_blank(){
+            if (input_name.value==='' || input_address.value==='' || address_detail.value==='' || phone1.value==='' || phone2.value==='' || phone3.value==='') {
+				alert('모든 정보를 입력해주세요.');
+			}
+			else{
+                location.href='./payment.html'
+			}
+		}
+		function openPopup(){
+    	    window.open("https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm", "postNum", "width=550, height=500");
+
+		}
   </script>
 </html>
