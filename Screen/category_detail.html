@@ -194,16 +194,15 @@
 				</div>
 				<!--상품리뷰가 숨겨진 상태 시작-->
 				<div class="detail_info" id="detail_info1" style="display: block;">
-				<!--	상세정보-->
 					<a href="#" class="footer_review1" onclick="footer(document.getElementById('detail_info1')); footer(document.getElementById('detail_info2'));return false;">상품후기</a>
 				</div>
 				<!--상품리뷰가 숨겨진 상태 끝-->
 
 				<!--상품리뷰가 펼쳐진 상태 시작-->
 				<div class="detail_info" id="detail_info2" style="display: none;">
-					<!--	상세정보-->
-					<div class="footer_review2" onclick="footer(document.getElementById('detail_info1')); footer(document.getElementById('detail_info2'));return false;">상품후기
-					<iframe src="review.html" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+					<div style="overflow: hidden">
+						<iframe src="review.html" style="position: relative; top: -160px;" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+						<div class="footer_review2" onclick="footer(document.getElementById('detail_info1')); footer(document.getElementById('detail_info2'));return false;" >닫기</div>
 					</div>
 				</div>
 				<!--상품리뷰가 펼쳐진 상태 끝-->
@@ -220,7 +219,7 @@
 	function menu_click(classname){
         $('#menu_button').toggleClass('show_menu');
     }
-    function footer(classname) {
+   function footer(classname) {
 		if (classname.style.display === 'none')
 		    classname.style.display = 'block';
 		else if (classname.style.display === 'block')
