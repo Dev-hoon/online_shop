@@ -83,10 +83,10 @@
     </div>
 	<!--공통부분 끝-->
 	<div class="write_part">
-		<input type="text" name="title_text" class="title_text" value="제목을 작성해 주세요."><br>
-		<textarea class="write_text">이곳에 내용을 써주세요.</textarea><br>
+		<input type="text" name="title_text" class="title_text" required><br>
+		<textarea class="write_text" required></textarea><br>
 		<input type="submit" name="posting_button" value="작성" class="button">
-		<input type="button" name="posting_button" value="취소" class="button">
+        <input class="button" type="button" name="posting_button" value="취소" onclick="location.href='history.back()'">
 	</div>
 </body>
 <script type="text/javascript">
