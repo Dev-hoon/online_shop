@@ -61,27 +61,29 @@
 		<!--항목명과 입력란의 줄을 맞추기 위해 각각 따로 div씌움-->
 			<div class="column_name">아이디</div>
 			<div class="column_contents">
-				<input type="text" name="id" class="input_box">
+				<input type="text" name="id" class="input_id" required>
 			</div><br>
 			<div class="column_name">이름</div>
 			<div class="column_contents">
-				<input type="text" name="name" class="input_box">
+				<input type="text" name="name" class="input_name" required>
 			</div><br>
 			<div class="column_name">핸드폰</div>
 			<div class="column_contents">
-				<input type="text" name="phone" class="input_box">
-			</div><br>
+				<input type="text" name="phone" class="input_phone" required>
+			</div><br><br>
 			<div>
-				<input type="submit" value="조회">
+				<input type="submit" class="ok_button" value="조회">
+				<input class="cancel_button" type="button" value="취소" onclick="location.href='history.back()'">
 			</div>
 		</form>
 	</div>
 
 </body>
 <script type="text/javascript">
-        function menu_click(classname){
+	function menu_click(classname){
         $('#menu_button').toggleClass('show_menu');
     }
+
 </script>
 
 </html>
