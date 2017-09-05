@@ -96,7 +96,7 @@
 			float: right;
 			margin-right: 20px;
 		}
-		.detail_info{
+		.detail_info {
 			clear: both;
 			font-size: 20px;
 			padding-top: 40px;
@@ -185,18 +185,28 @@
 								
 							</table>
 							<div class="submit_btn">
-								<input type="button" value="바로구매" onclick="location.href='./payment.html'">
+								<input type="button" value="바로구매" onclick="location.href='./buy.html'">
 								<input type="button" value="장바구니" onclick="location.href='./cart.html'">
 								<input type="button" value="쇼핑하기" onclick="location.href='./category.html'">
 							</div>
 						</form>
 					</div>
 				</div>
-				<div>
-				<div class="detail_info">
-					상세정보
-					<a href="..\Screen\review.html">상품후기</a>
+				<!--상품리뷰가 숨겨진 상태 시작-->
+				<div class="detail_info" id="detail_info1" style="display: block;">
+					<a href="#" class="footer_review1" onclick="footer(document.getElementById('detail_info1')); footer(document.getElementById('detail_info2'));return false;">상품후기</a>
 				</div>
+				<!--상품리뷰가 숨겨진 상태 끝-->
+
+				<!--상품리뷰가 펼쳐진 상태 시작-->
+				<div class="detail_info" id="detail_info2" style="display: none;">
+					<div style="overflow: hidden">
+						<iframe src="review.html" style="position: relative; top: -160px;" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+						<div class="footer_review2" onclick="footer(document.getElementById('detail_info1')); footer(document.getElementById('detail_info2'));return false;" >닫기</div>
+					</div>
+				</div>
+				<!--상품리뷰가 펼쳐진 상태 끝-->
+
 			</main>
 			<aside>
                 AD
@@ -206,9 +216,16 @@
 </body>
 
 <script type="text/javascript">
-        function menu_click(classname){
+	function menu_click(classname){
         $('#menu_button').toggleClass('show_menu');
     }
+   function footer(classname) {
+		if (classname.style.display === 'none')
+		    classname.style.display = 'block';
+		else if (classname.style.display === 'block')
+		    classname.style.display = 'none';
+    }
+
 </script>
 
 </html>
