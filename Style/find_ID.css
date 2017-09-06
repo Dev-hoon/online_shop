@@ -37,3 +37,19 @@ body{
 {
 	opacity: 1;
 }
+.ok_button{
+	position: absolute;
+	left: 42%;
+	background: #244169;
+	color: white;
+	border: 1px solid black;
+	margin: 20px;
+}
+.cancel_button{
+	position: absolute;
+	left: 50%;
+	background: #244169;
+	color: white;
+	border: 1px solid black;
+	margin: 20px auto;
+}
