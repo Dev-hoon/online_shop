@@ -87,16 +87,16 @@
 					<input type="checkbox" name="privacy_ok" class="agree" required>동의함
 				</div>
 			</div>
-			<input type="submit" name="submit" value="완료" class="button" onclick="checked_check();">
+			<input type="submit" name="submit" value="완료" class="button" onclick="input_info_check();">
 			<input type="button" onclick="javascript:history.back()" class="button" value="취소">
 		</form>
 	</div>
 </body>
 <script type="text/javascript">
-    function check_new_password_true(){
-        var pw = document.getElementById("input_pw").value;
-        var pw_check= document.getElementById("input_pw_check").value;
 
+	function check_new_password_true(){
+		var pw = document.getElementById("input_pw").value;
+		var pw_check= document.getElementById("input_pw_check").value;
         if(pw_check != pw){
             document.getElementById("pw_same").innerHTML="<b><font color='red' size='1px'>일치하지 않습니다.</font></b>"
         }
@@ -109,8 +109,9 @@
         window.open("https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm", "postNum", "width=550, height=500");
 
     }
-    //checkbox 체크안하면 경고하는 함수
-    function checked_check() {
+
+    function input_info_check() {
+        //checkbox 체크안하면 경고하는 함수 시작
         var ok_checked = document.getElementsByClassName("agree");
         if ($(ok_checked).prop("checked") ){
             location.href='#';
@@ -119,6 +120,17 @@
             alert("동의함에 체크해주세요.");
            // 페이지 안넘어가는 코드 필요  (지금은 required)
 		}
+        //checkbox 체크안하면 경고하는 함수 끝
+
+		//비밀번호 일치하지 않으면 경고하는 함수 시작
+        var pw = document.getElementById("input_pw").value;
+        var pw_check= document.getElementById("input_pw_check").value;
+        if (pw_check != pw){
+            alert("비밀번호를 다시 확인 해 주세요");
+            // 페이지 안넘어가는 코드 필요
+            return false;
+		}
+		//비밀번호 일치하지 않으면 경고하는 함수 끝
     }
 </script>
 </html>
