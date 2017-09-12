@@ -79,17 +79,17 @@
 			<div id="phone_number">
 				휴대전화 <input type="tel" name="phone_number">
 			</div>
-			<div><input type="checkbox" name="terms_ok">개인정보 판매자 제공에 동의합니다.</div>
+			<div><input type="checkbox" name="terms_ok" class="agree" required>개인정보 판매자 제공에 동의합니다.</div>
 			<div class="terms_box">
 				약관내용
 			</div>
-			<div><input type="checkbox" name="terms_ok">개인정보 수집 및 이용에 동의합니다.</div>
+			<div><input type="checkbox" name="terms_ok" class="agree" required>개인정보 수집 및 이용에 동의합니다.</div>
 			<div class="terms_box">
 				약관내용
 			</div>
 			<div>
-				<input type="submit" value="결제">
-				<input type="reset" value="취소">
+				<input type="submit" class="ok_button" value="결제" onclick="checked_check();">
+				<input type="button" onclick="javascript:history.back()" class="cancel_button" value="취소">
 			</div>
 		</div>
 	</div>
@@ -109,6 +109,16 @@
 	function menu_click(classname)
 	{
         $('#menu_button').toggleClass('show_menu');
+    }
+    function checked_check() {
+        var ok_checked = document.getElementsByClassName("agree");
+        if ($(ok_checked).prop("checked") ){
+            location.href='#';
+        }
+        else{
+            alert("동의함에 체크해주세요.");
+            // 페이지 안넘어가는 코드 필요  (지금은 required)
+        }
     }
 </script>
 </html>
