@@ -62,59 +62,70 @@
 		<a href=".\index.html" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></a>
        	<div onclick="location.href='index.html'" id="page_title_onlineShop" style="display: inline-block;">Online-Shop</div>
 	</div>
-	<table>
-		<thead>
-			<tr>
-				<td>장바구니</td>
-				<td>결제 대기상품</td>
-				<td>결제 완료상품</td>
-				<td>배송중인 상품</td>
-				<td>배송완료 상품</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><a href="./cart.html">1개</a></td>
-				<td><a href="">3개</a></td>
-				<td><a href="">2개</a></td>
-				<td><a href="">2개</a></td>
-				<td><a href="">5개</a></td>
-			</tr>
-		</tbody>
-	</table>
-	<div class="my_info">
-		<div class="info">
-			<div style="margin: 20px;">회원이름 : 홍길동</div>
-			<div style="margin: 20px;">회원 아이디 : id1234</div>
-			<div style="margin: 20px;"><a href="./change_membership.html">회원정보 변경</a></div>
-			<div style="margin: 20px;"><a href="./withdrawal.html">회원 탈퇴</a></div>
-			<div style="margin: 20px;"><a href="./QnA.html">문의</a></div>
-		</div>
-		<div class="goods">
-			<div class="recently_viewed_goods">
-				<div class="class_viewed_goods1"> 
-					<div>최근에 본 상품</div>
-					<img class="goods_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt09aIee9o57cswSFs4FlQd4tyh9WaRitqC8_IbJhrJZGIdviN">
-					<a href="" class="goods_name">상품1</a>
-				</div>
-				<div class="class_viewed_goods2"> 
-					<img class="goods_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt09aIee9o57cswSFs4FlQd4tyh9WaRitqC8_IbJhrJZGIdviN">
-					<a href="" class="goods_name">상품2</a>
-				</div>
-			</div>
-			<div class="recently_purchased_goods">
-				<div class="class_purchased_goods1">
-					<div>최근에 구매한 상품</div>
-					<img class="goods_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt09aIee9o57cswSFs4FlQd4tyh9WaRitqC8_IbJhrJZGIdviN">
-					<a href="" class="goods_name">상품1</a>
-				</div>
-				<div class="class_purchased_goods2"> 
-					<img class="goods_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt09aIee9o57cswSFs4FlQd4tyh9WaRitqC8_IbJhrJZGIdviN">
-					<a href="" class="goods_name">상품2</a>
-				</div>
-			</div>
-		</div>
+	<div>
+		<button onclick="location.href='./change_membership.html'">회원정보변경</button>
+		<button onclick="location.href='./withdrawal.html'">탈퇴</button>
+		<button onclick="location.href='./review.html'">후기작성</button>
+		<button onclick="location.href='./QnA.html'">문의</button>
 	</div>
+	<div>
+		내 정보<br>
+		이름:홍길동 id:asdf1234
+	</div>
+	<div>
+		나의 쇼핑내역<br>
+		<table>
+			<th>주문접수</th>
+			<th>결제완료</th>
+			<th>상품준비중</th>
+			<th>배송중</th>
+			<th>배송완료</th>
+			<th></th>
+			<tr>
+				<td>1개</td>
+				<td>1개</td>
+				<td>1개</td>
+				<td>1개</td>
+				<td>0개</td>
+				<td>-취소 : 1건<br>
+					-교환 : 1건<br>
+					-반품 : 0건<br>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		주문내역<br>
+		<table>
+			<th>주문일/주문번호</th>
+			<th>상품정보</th>
+			<th>수량</th>
+			<th>구매금액</th>
+			<th>주문상태</th>
+			<th>배송처</th>
+			<th>주문변경</th>
+			<tr>
+				<td>170813/00011</td>
+				<td></td>
+				<td>2</td>
+				<td>21000</td>
+				<td>배송중</td>
+				<td>집</td>
+				<td><button>주문변경</button></td>
+			</tr>
+			<tr>
+				<td>170801/00010</td>
+				<td></td>
+				<td>1</td>
+				<td>5000</td>
+				<td>배송완료</td>
+				<td>집</td>
+				<td><button>주문변경</button></td>
+			</tr>
+		</table>
+	</div>
+
+
 </body>
 
 <script type="text/javascript">
