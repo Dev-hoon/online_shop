@@ -1,7 +1,30 @@
-.my_info{
-	width: 600px;
+.basic_setting
+{
 	margin: auto;
+	font-size: 15px;
+	font-family: "맑은고딕";	
 }
+#buttons
+{
+	float: left;
+}
+.buttons
+{
+	text-align: center;
+	width: 8em;
+	height: 2em;
+	background-color: #cbdcf4;
+	color: black;
+	border: 1px solid black;
+	font-size: 12px;
+}
+.my_info
+{
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border: 1px solid grey;
+}
+
 .info{
 	position: relative;
 	transform: translate(70%,-60%);

@@ -62,17 +62,30 @@
 		<a href=".\index.html" style="display: inline-block;"><img id="logo_img" src="..\image\logo.png"></a>
        	<div onclick="location.href='index.html'" id="page_title_onlineShop" style="display: inline-block;">Online-Shop</div>
 	</div>
-	<div>
-		<button onclick="location.href='./change_membership.html'">회원정보변경</button>
-		<button onclick="location.href='./withdrawal.html'">탈퇴</button>
-		<button onclick="location.href='./review.html'">후기작성</button>
-		<button onclick="location.href='./QnA.html'">문의</button>
+	<div class="basic_setting" id="buttons">
+		<br>
+		<button class="buttons" onclick="location.href='./change_membership.html'">회원정보변경</button>
+		<button class="buttons" onclick="location.href='./withdrawal.html'">회원 탈퇴</button>
+		<button class="buttons" onclick="location.href='./review.html'">후기작성</button>
+		<button class="buttons" onclick="location.href='./QnA.html'">문  의</button>
+		<br>
 	</div>
-	<div>
-		내 정보<br>
-		이름:홍길동 id:asdf1234
+	<div class="basic_setting">
+		<table class="my_info">
+			<tr>
+				<td>
+					회원명 : 홍길동<br>
+					아이디 : asdf1234<br>
+					회원등급 : 신입회원
+				</td>
+				<td>
+					적립금 1345 원<br>
+					포인트 150 <br>
+				</td>
+			</tr>
+		</table>
 	</div>
-	<div>
+	<div class="basic_setting">
 		나의 쇼핑내역<br>
 		<table>
 			<th>주문접수</th>
@@ -94,8 +107,8 @@
 			</tr>
 		</table>
 	</div>
-	<div>
-		주문내역<br>
+	<div class="basic_setting">
+		주문상세<br>
 		<table>
 			<th>주문일/주문번호</th>
 			<th>상품정보</th>
